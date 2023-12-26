@@ -1,5 +1,5 @@
 ---
-  title: Port Vila
+  title: Port Vila (NVVV)
 ---
 
 --8<-- "includes/abbreviations.md"
@@ -46,4 +46,7 @@ Refer to [Class D Tower Skills](../../controller-skills/classdtwr) for more info
 
 ### Standard Assignable Level
 Climbing to Nadi Oceanic: `FL240`  
-Descending to Port Vila Tower: `FL250`  
+Descending to Port Vila Tower: `FL250`
+
+!!! note
+    Charts can be found on the [](https://vli.vu/operators/#Documentation){target=new}, available under Documentation > Aeronautical Information Publication.
