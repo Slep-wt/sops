@@ -52,6 +52,11 @@
 *[TFMS]: The Flow Management System
 *[TAF]: Terminal Area Forecast
 *[DAP]: Departure and Approach Procedures (AIP)
+*[FIS]: Flight Information Service
+*[SIS]: Surveillance Information Service (Flight Following)
+*[ARP]: Aerodrome Reference Point
+*[SVFR]: Special VFR
+*[MTOW]: Maximum Takeoff Weight
 *[AAW]: Adelaide Approach West
 *[AAE]: Adelaide Approach East
 *[BAC]: Brisbane (Gold Coast) Approach
@@ -115,7 +120,7 @@
 *[WEG]: Brisbane (Warrego) Centre
 *[COL]: Brisbane (Coral) Radio
 *[FLD]: Brisbane (Flinders) Radio
-*[HWE]: Brisbane (Howe) Radio
+*[HWE]: Brisbane (Howe) Centre
 *[INE]: Brisbane (Indian East) Radio
 *[INS]: Brisbane (Indian South) Radio
 *[ASW]: Melbourne (Alice Springs West) Centre
@@ -146,10 +151,13 @@
 *[WOL]: Melbourne (Wollongong) Centre
 *[WON]: Melbourne (Wonthaggi) Centre
 *[WRA]: Melbourne (Woomera) Centre
-*[SVFR]: Special VFR
-*[FIS]: Flight Information Service
-*[SIS]: Surveillance Information Service (Flight Following)
-*[ARP]: Aerodrome Reference Point
+*[SFL]: Sydney Flow
+*[MFL]: Melbourne Flow
+*[AFL]: Adelaide Flow
+*[BFL]: Brisbane Flow
+*[CSF]: Cairns Flow
+*[CBF]: Canberra Flow
+*[PFL]: Perth Flow
 *[GGO]: Goonoo Goonoo Station
 *[WBH]: Wallabadah
 *[NUN]: Nundle
@@ -241,3 +249,27 @@
 *[DNGR]: Point Danger
 *[IAS]: Indicated Airspeed
 *[PNL]: Port Noarlunga
+*[PWLC]: Powerline Crossing
+*[LUY]: Latrobe University
+*[WMS]: Williamstown
+*[YBBB]: Brisbane FIR
+*[YMMM]: Melbourne FIR
+*[NFFF]: Nadi FIR
+*[AGGG]: Honiara FIR
+*[ANAU]: Nauru FIR
+*[NZZO]: Auckland FIR
+*[NZCM]: McMurdo FIR
+*[KZAK]: Oakland FIR
+*[NTTT]: Tahiti FIR
+*[WAAF]: Ujung Pandang FIR
+*[WIIF]: Jakarta FIR
+*[VCCF]: Colombo FIR
+*[VRMF]: Male FIR
+*[FIMM]: Mauritius FIR
+*[FAJO]: Johannesburg FIR
+*[AYPM]: Port Moresby FIR
+*[NWWW]: Noumea FIR
+*[NVVV]: Port Vila FIR
+*[RJTG]: Fukuoka FIR
+*[MX]: Maximum Speed
+*[CSR]: Cancel Speed Restrictions

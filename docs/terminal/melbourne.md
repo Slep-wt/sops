@@ -11,32 +11,63 @@
 | **Melbourne Approach East**    |**MAE**| **Melbourne Approach**   | **132.000**         | **ML_APP**                                   |
 | Melbourne Departures North†    |MDN| Melbourne Departures  | 118.900         | ML_DEP          |
 | Melbourne Departures South†   |MDS| Melbourne Departures | 129.400          | ML-S_DEP         |
-| Melbourne Flow†        |MFL|                |          | ML-FLW_CTR                               |
+| Melbourne Flow†        |MFL|                |          | ML_FMP                             |
 
-† *Non-standard positions* may only be used in accordance with [VATPAC Ratings and Controller Positions Policy](https://vatpac.org/publications/policies){target=new}
+† *Non-standard positions* may only be used in accordance with [VATPAC Air Traffic Services Policy](https://vatpac.org/publications/policies){target=new}
 
 ## Airspace
 The Vertical limits of the ML TCU are `SFC` to `F245`.  
-ML TCU is responsible for the Melbourne TCU, except:    
-a) The Sunbury Corridor, when **ML ADC** is online  
-b) The South East Quadrant, when **EN ADC** is online  
-c) The Coffin, when **EN ADC** is online, and the airspace has been released to **EN ADC**  
 
-<figure markdown>
-![Melbourne TCU Airspace Administration](img/MLTCUairspace.png){ width="500" }
-  <figcaption>Melbourne TCU Airspace Administration</figcaption>
-</figure>
+### Reclassifications
+#### MB CTR
+MB CTR reverts to Class G when **MB ADC** is offline, and is administered by the relevant ML TCU controller.
+
+See also: [MB ADC Offline](#mb-adc-offline).
+
+#### AV CTR
+AV CTR Class D `SFC` to `A007` reverts to Class G and `A007` to `A025` to Class E when **AV ADC** is offline, and is administered by the relevant ML TCU controller.
+
+See also: [AV ADC Offline](#av-adc-offline).
+
+### Airspace Division
+The divisions of the airspace between **MAE**, **MDN**, and **MDS** change based on the Runway Mode.
 
 !!! note
-    The released airspace of the Sunbury Corridor and South East Quadrant is only from the lower level of CTA. ML TCU still owns the Class G airspace beneath it.
+    The following diagrams do not include non ML TCU areas of responsibility such as MB CTR or AV ADC
 
-MB CTR reverts to Class G when **MB ADC** is offline, and is administered by the relevant ML TCU controller.    
-EN CTR reverts to Class G when **EN ADC** is offline, and is administered by the relevant ML TCU controller.  
-AV CTR Class D `SFC` to `A007` reverts to Class G and `A007` to `A025` to Class E when **AV ADC** is offline, and is administered by the relevant ML TCU controller.  
+#### 09
+<figure markdown>
+![09 TCU Structure](img/ML09annotated.png){ width="700" }
+  <figcaption>09 TCU Structure</figcaption>
+</figure>
+
+#### 09A16D
+<figure markdown>
+![09A16D TCU Structure](img/ML09A16Dannotated.png){ width="700" }
+  <figcaption>09A16D TCU Structure</figcaption>
+</figure>
+
+#### 16 / 16A27D
+<figure markdown>
+![16 / 16A27D TCU Structure](img/ML16annotated.png){ width="700" }
+  <figcaption>16 / 16A27D TCU Structure</figcaption>
+</figure>
+
+#### 27 / 27AD34D
+<figure markdown>
+![27 / 27AD34D TCU Structure](img/ML27annotated.png){ width="700" }
+  <figcaption>27 / 27AD34D TCU Structure</figcaption>
+</figure>
+
+#### 34
+<figure markdown>
+![34 TCU Structure](img/ML34annotated.png){ width="700" }
+  <figcaption>34 TCU Structure</figcaption>
+</figure>
 
 ## Departure Procedures
 ### ML (RADAR) SID
-The **ML (RADAR) SID** is used for all non-jet IFR departures (and certain jet aircraft) from YMML.  Unlike at other aerodromes, **ML ADC** does *not* need to coordinate these departures with a 'Next' call, provided they are assigned the standard assignable level and a [Standard Assignable Heading](#standard-assignable-headings).
+The **ML (RADAR) SID** is used for all non-jet IFR departures (and certain jet aircraft) from YMML.  Unlike at other aerodromes, **ML ADC** does *not* need to coordinate these departures with a 'Next' call, provided they are assigned the standard assignable level and a [Standard Assignable Heading](#standard-assignable-departure-headings).
 
 ## Arrival Procedures
 ### Level Assignment
@@ -151,68 +182,50 @@ Due to the low level of CTA surrounding YMMB, it is best practice to give airway
     **ML TCU:** "AAC, cleared to YBLT via SAMIG, flight planned route, climb to A040"  
     **AAC:** "Cleared to YBLT via SAMIG, flight planned route, climb to A040, AAC"
 
-## Airspace Division
-The divisions of the airspace between **MAE**, **MDN**, and **MDS** change based on the Runway Mode.
-
-!!! note
-    The following diagrams do not include non ML TCU areas of responsibility such as MB CTR or AV ADC
-
-### 09
-<figure markdown>
-![09 TCU Structure](img/ML09annotated.png){ width="700" }
-  <figcaption>09 TCU Structure</figcaption>
-</figure>
-
-### 09A16D
-<figure markdown>
-![09A16D TCU Structure](img/ML09A16Dannotated.png){ width="700" }
-  <figcaption>09A16D TCU Structure</figcaption>
-</figure>
-
-### 16 / 16A27D
-<figure markdown>
-![16 / 16A27D TCU Structure](img/ML16annotated.png){ width="700" }
-  <figcaption>16 / 16A27D TCU Structure</figcaption>
-</figure>
-
-### 27 / 27AD34D
-<figure markdown>
-![27 / 27AD34D TCU Structure](img/ML27annotated.png){ width="700" }
-  <figcaption>27 / 27AD34D TCU Structure</figcaption>
-</figure>
-
-### 34
-<figure markdown>
-![34 TCU Structure](img/ML34annotated.png){ width="700" }
-  <figcaption>34 TCU Structure</figcaption>
-</figure>
-
 ## Coordination
 
 ### Enroute
 #### Departures
-Voiceless coordination is in place from ML TCU to all surrounding ENR sectors (**ELW** to the East, **YWE**/**WON** all other directions) for aircraft assigned the lower of `F240` or the `RFL`, and tracking via a Procedural SID terminus.
-Any aircraft not meeting the above criteria must be prior coordinated to ENR.
+Voiceless to all surrounding Enroute sectors for all aircraft:
+ 
+- Tracking via a Procedural SID terminus; and  
+- Assigned the lower of `F240` or the `RFL`
+
+All other aircraft going to Enroute CTA must be **Heads-up** Coordinated by ML TCU prior to the boundary.
 
 !!! example
     <span class="hotline">**ML TCU** -> **YWE**</span>: "QFA420, with your concurrence, will be assigned F190, for my separation with QLK52D"  
     <span class="hotline">**YWE** -> **ML TCU**</span>: "QFA420, concur F190"  
 
 #### Arrivals
-The Standard assignable level from ENR to ML TCU is `A090`. All other levels must be prior coordinated
+Voiceless for all aircraft:
+
+- With ADES **YMML**; and  
+- Assigned a STAR; and  
+- Assigned `A090`
+
+All other aircraft coming from Enroute CTA will be **Heads-up** Coordinated to ML TCU.
 
 ### ML ADC
 #### Auto Release
 !!! important
     Melbourne utilises auto release for all **Procedural** SIDs and the **ML (RADAR)** SID provided aircraft are assigned the Standard Assignable Level and a [Standard Assignable Heading](#standard-assignable-departure-headings).
 
-'Next' coordination is **not** required for aircraft that are:   
-    a) Departing from a runway nominated on the ATIS; and  
-    b) Assigned `A050`; and  
-    c) Assigned a **Procedural** SID; or  
-    d) Assigned a [Standard Assignable Heading](#standard-assignable-departure-headings)
+'Next' coordination is **not** required for aircraft that are:  
 
-Any aircraft that don't meet these criteria must be coordinated to ML TCU with a "Next" Call.  
+- Assigned a **Procedural** SID  
+    - Departing from a runway nominated on the ATIS; and  
+    - Assigned `A050`  
+- Assigned the **ML (RADAR)** SID  
+    - Departing from a runway nominated on the ATIS; and  
+    - Assigned `A050`; and  
+    - Assigned a [Standard Assignable Heading](#standard-assignable-departure-headings)  
+- Assigned the **ISPEG** SID  
+    - Departing from Runway 16 during the 16A27D Runway Mode; and  
+    - Assigned `A050`; and  
+    - Tracking via **MNG**, **NONIX**, **DOSEL**, **KEPPA**, **NEVIS** or **ESDIG**
+
+Any aircraft that don't meet these criteria will be coordinated to ML TCU with a "Next" Call.  
 
 !!! example
     <span class="hotline">**ML ADC** -> **ML TCU**</span>: "Next, CYF, runway 34"  
@@ -234,9 +247,17 @@ The following Standard Assignable Headings may be used for aircraft assigned the
 **When Runway 09 is in use for arrivals, all Runway 16 departures shall be assigned heading 160.
 
 ### EN ADC
+#### Airspace
+EN ADC is responsible for the Class C airspace shown below, `SFC` to `A020`.
+
+<figure markdown>
+![EN ADC Airspace](img/enadc.png){ width="700" }
+  <figcaption>EN ADC Airspace</figcaption>
+</figure>
 
 #### Start Clearance
 When an aircraft requests start clearance, the EN SMC controller shall coordinate with ML TCU to obtain the start clearance.
+
 #### Departures
 Essendon departures that will not enter ML TCU Class C airspace are not required to be coordinated.
 
@@ -264,6 +285,11 @@ VFR aircraft require a level readback.
 When “The Coffin” is released, ML TCU is required to coordinate any use of Runway 27 to EN ADC prior to use.
 
 ### AV ADC
+#### Airspace
+AV ADC is responsible for the Class D Airspace within the AV CTR `SFC` to `A025`.
+
+Refer to [Reclassifications](#av-ctr) for operations when AV ADC is offline.
+
 #### Departures
 'Next' coordination is **not** required from AV ADC for aircraft that are:   
   a) Departing from a runway nominated on the ATIS; or  
@@ -289,6 +315,11 @@ VFR aircraft will have their control services terminated upon leaving controlled
     <span class="hotline">**AV ADC** -> **MDS**</span>: "JST631, ILS-Y 18"  
 
 ### MB ADC
+#### Airspace
+MB ADC is responsible for the Class D airspace in the MB CTR `SFC` to `A025`.
+
+Refer to [Reclassifications](#mb-ctr) for operations when MB ADC is offline.
+
 #### Departures
 Departures in to ML TCU Class C airspace require a "Next" call, where ML TCU will provide the cleared level. There is no standard assignable level.
 

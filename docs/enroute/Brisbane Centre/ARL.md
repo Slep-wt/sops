@@ -14,16 +14,35 @@
 | Maitland† | Brisbane Centre | 132.350 | BN-MLD_CTR |
 | Ocean† | Brisbane Centre | 128.600 | BN-OCN_CTR |
 
-† *Non-standard positions* may only be used in accordance with [VATPAC Ratings and Controller Positions Policy](https://vatpac.org/publications/policies)
-## Airspace
-When **TW ADC** is offline, TW CTR (Class D and C `SFC` to `A085`) reverts to Class G, and is administered by ARL and MDE. Alternatively, ARL (not MDE) may provide a [top-down procedural service](../../../aerodromes/tamworth) if they wish (not recommended).  
+† *Non-standard positions* may only be used in accordance with [VATPAC Air Traffic Services Policy](https://vatpac.org/publications/policies)
 
-When **CFS ADC** is offline, CFS CTR (Class D `SFC` to `A045`) reverts to Class G, and is administered by MNN and INL. MNN is **not permitted** to provide a [top-down procedural service](../../../aerodromes/Coffs), only INL can do this, and they must coordinate with MNN if they are doing so.
+### CPDLC
+
+The Primary Communication Method for ARL is Voice.
+
+[CPDLC](../../controller-skills/cpdlc.md) may be used in lieu when applicable.
+
+The CPDLC Station Code is `YARL`.
+
+!!! tip
+        Even though ARL's Primary Communication Method is Voice, CPDLC may be used for Overfliers.
+
+## Airspace
 
 <figure markdown>
 ![Armidale Airspace](../assets/arl.png){ width="700" }
   <figcaption>Armidale Airspace</figcaption>
 </figure>
+
+### Reclassifications
+#### TW CTR
+When **TW ADC** is offline, TW CTR (Class D and C `SFC` to `A085`) reverts to Class G, and is administered by ARL and MDE. Alternatively, ARL (not MDE) may provide a [top-down procedural service](../../../aerodromes/tamworth) if they wish (not recommended).  
+
+#### CFS CTR
+When **CFS ADC** is offline, CFS CTR (Class D `SFC` to `A045`) reverts to Class G, and is administered by MNN and INL. MNN is **not permitted** to provide a [top-down procedural service](../../../aerodromes/Coffs), only INL can do this, and they must coordinate with MNN if they are doing so.
+
+#### WLM CTR
+When **WLM TCU** is offline, WLM MIL CTR (Class C `SFC` to `A065`) reverts to Class G, and WLM MIL CTR (Class C `A065` to `F125`) reverts to Class E. This airspace is administered by the appropriate ARL subsector. Alternatively, ARL(MLD) may provide a [top-down service](../../../military/williamtown) if they wish.  
 
 ## Sector Responsibilities
 ### Armidale (ARL) / Manning (MNN)
@@ -54,6 +73,9 @@ MDE is responsible for aircraft operating into/out of YSTW from the north/west w
 OCN is responsible for sequencing, issuing STAR Clearances, and issuing descent for aircraft bound for YSSY via MARLN.
 
 Refer to the [Sequencing into YSSY](#sequencing-into-yssy) notes below for runway selection notes.
+
+### YWLM Operations
+All ARL subsectors are responsible for assigning STARs to aircraft inbound to YWLM, and the STAR shall be issued by the first ARL subsector to take jurisdiction of the aircraft.
 
 ### Sequencing into YSSY
 Sequencing arrivals from the north/east into YSSY is a joint responsibility of the subsectors of ARL. Initial sequencing actions for aircraft from the north should be performed by ARL and MNN, with fine tuning and any holding required issued by CNK. 
@@ -101,15 +123,28 @@ Aircraft being transferred from the following sectors shall be given STAR Cleara
 
 ## Coordination
 ### SY TCU
-The Standard Assignable level from ARL(All) to SY TCU is:  
-`A100` for aircraft tracking via BOREE or MARLN, and assigned the relevant STAR  
-`A090` for aircraft tracking via MEPIL, and assigned the MEPIL STAR  
+#### Airspace
+SY TCU is responsible for the airspace within a 45nm radius of TESAT, `SFC` to `F285`.
 
-All other aircraft must be voice coordinated to SY TCU prior to **20nm** from the boundary.
+Refer to [Sydney TCU Airspace Division](../../../terminal/sydney/#airspace-division) for information on airspace divisions when **SAS**, **SDN**, **SDS** and/or **SRI** are online.
 
-The Standard Assignable level from SY TCU to ARL(All) is the lower of `F280` or the `RFL`, and tracking via a SID terminus.
+#### Arrivals/Overfliers
+Voiceless for all aircraft:
 
-Refer to [Sydney TCU Airspace Division](../../terminal/sydney/#airspace-division) for information on airspace divisions when **SAS**, **SDN**, **SDS** and/or **SRI** are online.
+- With ADES **YSSY**; and  
+- Assigned a STAR; and  
+- Tracking via **MARLN** or **BOREE**, assigned `A100`; or  
+- Tracking via **MEPIL**, assigned `A090`
+
+All other aircraft coming from ARL CTA must be **Heads-up** Coordinated to SY TCU prior to **20nm** from the boundary.
+
+#### Departures
+Voiceless for all aircraft:
+
+- Tracking via a Procedural SID terminus; and  
+- Assigned the lower of `F280` or the `RFL`
+
+All other aircraft going to ARL CTA will be **Heads-up** Coordinated by SY TCU.
 
 ### Enroute
 As per [Standard coordination procedures](../../../controller-skills/coordination/#enr-enr), Voiceless, no changes to route or CFL within **50nm** to boundary.
@@ -118,6 +153,7 @@ As per [Standard coordination procedures](../../../controller-skills/coordinatio
 As per [Standard coordination procedures](../../../controller-skills/coordination/#enr-enr), Voiceless, no changes to route or CFL within **50nm** to boundary.
 
 That being said, due to their small sizes and frequent random-track traffic, it is *advised* that ARL(All) gives **Heads-up Coordination** in the following scenarios:   
+
 - MNN to ARL for all aircraft  
 - ARL to MNN for all aircraft  
 - CNK to MLD for all aircraft  
@@ -125,9 +161,9 @@ That being said, due to their small sizes and frequent random-track traffic, it 
 
 ### TW ADC
 #### Airspace
-When **TW ADC** is online, **ARL** owns the Class C airspace from `A065` upwards. **TW ADC** owns the Class D airspace `SFC` to `A045` and Class C airspace `A045` to `A065`.
+TW ADC is responsible for the Class D airspace in the TW CTR `SFC` to `A045`, as well as the Class C airspace between `A045` and `A065`.
 
-When **TW ADC** is closed, the Class C airspace `A085` and below is reclassified Class G.
+Refer to [Reclassifications](#tw-ctr) for operations when TW ADC is offline.
 
 #### Departures
 Departures from YSTW in to ARL/MDE Class C will be coordinated when ready for departure.
@@ -150,7 +186,9 @@ The Standard Assignable level from ARL/MDE to **TW ADC** is `A080`, any other le
 
 ### CFS ADC
 #### Airspace
-**INL** and **MNN** own the Class C airspace from **A045** upwards, and **CFS ADC** (when online) owns the Class D airspace **SFC-A045**.
+CFS ADC is responsible for the Class D airspace in the CFS CTR `SFC` to `A045`.
+
+Refer to [Reclassifications](#cfs-ctr) for operations when CFS ADC is offline.
 
 #### Departures
 Departures from YCFS in to MNN Class C will be coordinated when ready for departure.
@@ -171,45 +209,36 @@ YCFS arrivals shall be heads-up coordinated to **CFS ADC** from MNN prior to **5
 
 The Standard Assignable level from MNN to **CFS ADC** is `A080`, any other level must be prior coordinated.
 
-#### Overfliers
-Any aircraft that will enter CFS ADC airspace, and not landing at YCFS, must be Heads-up coordinated prior to **5 mins** from the boundary.
-
-!!! example
-    <span class="hotline">**MNN** -> **CFS ADC**</span>: "via CFS, GNP, Overflier"  
-    <span class="hotline">**CFS ADC** -> **MNN**</span>: "GNP, A030"
-
 ### WLM TCU
 #### Airspace
-By default, **WLM TCU** (when online) owns the airspace within the **R578A-G** restricted areas, unless stated otherwise by ad-hoc release or NOTAM. It is the responsibility of the **WLM TCU** controller to inform ARL(All) of what airspace they are assuming.
+By default, **WLM TCU** (when online) owns the airspace within the WLM MIL CTR `SFC` to `F125`, unless stated otherwise by ad-hoc release or NOTAM. It is the responsibility of the **WLM TCU** controller to inform ARL(All) of what airspace they are assuming.
 
-When WLM TCU is offline, **ARL** administers the Class E airspace (generally **A085** and above, or **A045** and above in some airspace steps) and the military Class C airspace is reclassified as Class G.
+Refer to [Reclassifications](#wlm-ctr) for operations when WLM TCU is offline.
 
 #### Departures
-Departures from **WLM TCU** in to ARL(All) Class C will be heads-up coordinated.
+Voiceless for all aircraft:
+
+- Tracking via a Procedural SID terminus; and  
+- Assigned the lower of `F120` or the `RFL`
+
+All other aircraft going to ARL CTA will be **Heads-up** Coordinated by WLM TCU.
 
 !!! example
-    <span class="hotline">**WLM TCU** -> **MNN**</span>: "Departed YWLM, WGTL33, will be assigned F120"  
-    <span class="hotline">**MNN** -> **WLM TCU**</span>: "WGTL33, F120"  
+    <span class="hotline">**WLM TCU** -> **MLD**</span>: "QJE1597, request DCT OMGAB"  
+    <span class="hotline">**MLD** -> **WLM TCU**</span>: "QJE1597, concur DCT OMGAB"  
 
 #### Arrivals/Overfliers
-All aircraft transiting from ARL(All) to **WLM TCU** must be heads-up coordinated prior to **20nm** from the boundary. Operations within **WLM TCU** are fairly ad-hoc, so there are no standard assignable levels, simply whatever the ARL(All) and **WLM TCU** controller agree on.
+Voiceless for all aircraft:
+
+- With ADES **YWLM**; and  
+- Assigned a STAR; and  
+- Assigned `A090`
+
+All other aircraft coming from ARL CTA must be **Heads-up** Coordinated to WLM TCU prior to **20nm** from the boundary.
 
 !!! example
-    <span class="hotline">**MNN** -> **WLM TCU**</span>: "via SANAD, JST458, will be assigned F130"  
-    <span class="hotline">**WLM TCU** -> **MNN**</span>: "JST458, F130"  
+    <span class="hotline">**CNK** -> **WLM TCU**</span>: "QFA1968, request DCT UPTEB"  
+    <span class="hotline">**WLM TCU** -> **CNK**</span>: "QFA1968, concur DCT UPTEB"  
 
-!!! tip
-    To keep it simple and safe, coordinate departures at the Lowest Assignable level over the TCU (eg, with standard WLM TCU configuration, `F130`). You may coordinate other levels with WLM TCU if required for separation purposes.
-
-#### R574 Release
-To put it bluntly, the R574 Restricted Area is quite large.
-
-<figure markdown>
-![R574 Restricted Area](../../military/img/r574.png){ width="700" }
-  <figcaption>R574 Restricted Area</figcaption>
-</figure>
-
-It also occupies a lot of airspace that would commonly be used by YSSY arrivals and departures. If YWLM military operations are taking ownership of this airspace, it is good practice to negotiate an airspace release, whether that be a lateral or vertical portion of airspace (or a combination), to enable them to facilitate YSSY arrivals and departures with minimal impact.
-
-### TSN/HWE (Oceanic)
-As per [Standard coordination procedures](../../../controller-skills/coordination/#enr-oceanic), Heads-up coordinate prior to **15 mins** to boundary.
+### TSN (Oceanic)
+As per [Standard coordination procedures](../../../controller-skills/coordination/#pacific-units), Voiceless, no changes to route or CFL within **15 mins** to boundary.

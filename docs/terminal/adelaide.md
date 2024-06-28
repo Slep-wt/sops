@@ -8,16 +8,22 @@
 
 | Name               | ID      | Callsign       | Frequency        | Login Identifier              |
 | ------------------ | --------------| -------------- | ---------------- | --------------------------------------|
-| **Adelaide Approach West**    |**AAW**| **Adelaide Approach**   | **124.200**         | **AD_APP**                                   |
-| Adelaide Approach East†    |AAE| Adelaide Departures  | 118.200         | AD_DEP          |
-| Adelaide Flow†        |AFL|                |          | AD-FLW_CTR                               |
+| **Adelaide Approach East**    |**AAE**| **Adelaide Approach**   | **118.200**         | **AD_APP**                                   |
+| Adelaide Approach West†    |AAW| Adelaide Approach  | 124.200         | AD-W_APP          |
+| Adelaide Flow†        |AFL|                |          | AD_FMP                              |
 
-† *Non-standard positions* may only be used in accordance with [VATPAC Ratings and Controller Positions Policy](https://vatpac.org/publications/policies)
+† *Non-standard positions* may only be used in accordance with [VATPAC Air Traffic Services Policy](https://vatpac.org/publications/policies){target=new}
 
 ## Airspace
 The Vertical limits of the AD TCU are `SFC` to `F245`.
 
-PF CTR reverts to Class G when **PF ADC** is offline, and is administered by the relevant AD TCU controller.    
+### Reclassifications
+#### PF CTR
+PF CTR reverts to Class G when **PF ADC** is offline, and is administered by the relevant AD TCU controller.
+
+See also: [PF ADC Offline](#pf-adc-offline).
+
+#### EDN CTR
 EDN CTR reverts to Class G when **EDN ADC** is offline, and is administered by the relevant AD TCU controller.  
 
 ### Airspace Division
@@ -40,7 +46,7 @@ Coordinate the aircraft with ADC, including the use of the appropriate clearance
 | Southbound | HNLY |
 
 <figure markdown>
-![Clearance Limits](../aerodromes/img/adclearancelimits.png){ width="500" }
+![Clearance Limits](img/adclearancelimits.png){ width="500" }
   <figcaption>Clearance Limits (red) and Approach/Departure Path (green)</figcaption>
 </figure>
 
@@ -75,23 +81,84 @@ Due to the low level of CTA at YPPF, it is best practice to give airways clearan
     **AD TCU**: "ABC, assigned heading right 360, report airborne"  
     **ABC**: "Assigned right 360, wilco, ABC"
 
+## Flow
+The tables below give an estimated time **in minutes** from the **Feeder Fix** to the **Threshold**, which can be used to plan sequencing actions within the TCU.
+
+The times assume there is *Nil wind*.
+
+### Jets
+
+| Feeder Fix | 05Z | 05V/W/X | 23A/Z | 23V |
+| ---------- | --- | ------- | ----- | --- |
+| ALEXI      | 14  | 13      | -     | -   |
+| DRINA      | -   | -       | 14    | 13  |
+| BLACK      | 16  | 15      | 12^   | -   |
+| KLAVA      | 16  | 15      | 13    | 12  |
+| ERITH      | -   | -       | 13    | 12  |
+| MARGO      | 14  | 13      | 15    | 13  |
+| RIKAB      | 13  | 12^     | 17    | 15  |
+
+- **GULLY** - Threshold is **5 minutes**  
+- **PADSI** - Threshold is **3.5 minutes**  
+- Add **1 minute** for aircraft assigned a reduced speed, Except ^  
+- Subtract **1 minute** for MX or CSR
+- For **Non-Jets** (except **DH8D**) tracking via Jet STAR;
+    - Add **2 minutes** (Except ^)
+    - Add only **1 minute** for ^
+
+### Non-Jets
+
+This table assumes that aircraft will be assigned:
+
+- The appropriate *Non-Jet STAR* (**ATPIP**, **ELROX**, **GULFS**, **PAMMY**, **RUSSL**, **SURGN**), or if none is available:
+- *No STAR*
+
+Thence track via a **5nm final** for the assigned runway.
+
+For Non-Jets tracking via the *full Jet STARs*, see [table above](#jets)
+
+| Feeder Fix | 05  | 12  | 23  | 30  |
+| ---------- | --- | --- | --- | --- |
+| ALEXI      | 12  | 14  | 12  | 11  |
+| DRINA      | 14  | 17  | 14  | 13  |
+| BLACK      | 16  | 15  | 13  | 13  |
+| RUSSL      | 17  | 15  | 14  | 13  |
+| KLAVA      | 15  | 13  | 13  | 16  |
+| ERITH      | -   | -   | -   | -   |
+| MARGO      | 13  | 12  | 13  | 15  |
+| RIKAB      | 13  | 13  | 15  | 16  |
+| ELROX      | 11  | 11  | 14  | 13  |
+
+- **5nm final** - Threshold is **2 minutes**  
+- Subtract **1 minute** for MX  
+- Subtract **1 minute** for **DH8D**
+
 ## Coordination
 ### Enroute
 #### Departures
-Voiceless coordination is in place from AD TCU to TBD/AUG for aircraft assigned the lower of `F240` or the `RFL`, and tracking via a Procedural SID terminus.
+Voiceless for all aircraft:
+ 
+- Tracking via a Procedural SID terminus; and  
+- Assigned the lower of `F240` or the `RFL`
 
-Any aircraft not meeting the above criteria must be prior coordinated to TBD/AUG.
+All other aircraft going to TBD CTA must be **Heads-up** Coordinated by AD TCU prior to the boundary.
 
 !!! example
     <span class="hotline">**AD TCU** -> **TBD**</span>: "PFY1234, request DCT LOLLS"  
     <span class="hotline">**TBD** -> **AD TCU**</span>: "PFY1234, concur DCT LOLLS"  
 
 #### Arrivals
-The Standard assignable level from TBD/AUG to AD TCU is `A090`, and assigned a STAR. All other aircraft must be prior coordinated
+Voiceless for all aircraft:
+
+- With ADES **YPAD**; and  
+- Assigned a STAR; and  
+- Assigned `A090`
+
+All other aircraft coming from TBD CTA will be **Heads-up** Coordinated to AD TCU.
 
 ### AD ADC
 #### Auto Release
-'Next' coordination is **not** required to from AD ADC for aircraft that are:   
+'Next' coordination is **not** required from AD ADC for aircraft that are:   
   a) Departing from a runway nominated on the ATIS; and  
   b) Assigned the standard assignable level; and  
   c) Assigned a **Procedural** SID
@@ -115,6 +182,11 @@ All aircraft transiting between internal AD TCU boundaries must be heads-up coor
 Boundary coordination is not required between AAW and AAE for aircraft arriving or departing tracking via the 05/23 extended centreline.
 
 ### PF ADC
+#### Airspace
+PF ADC is responsible for the Class D airspace in the PF CTR `SFC` to `A015`.
+
+Refer to [Reclassifications](#pf-ctr) for operations when PF ADC is offline.
+
 #### Departures
 When the aircraft is ready for departure, PF ADC will coordinate with AD TCU for permission to release the aircraft into CTA.
 
@@ -124,6 +196,7 @@ When the aircraft is ready for departure, PF ADC will coordinate with AD TCU for
     <span class="hotline">**PF ADC** -> **AAW**</span>: "Heading 020, XMM"
 
 The Standard Assignable level from PF ADC to AD TCU is the lower of `A030` or the `RFL`, any other level must be prior coordinated.
+
 #### Arrivals/Overfliers
 AD TCU will heads-up coordinate arrivals/overfliers from Class C to PF ADC prior to **5 mins** from the boundary.  
 IFR aircraft will be cleared for the coordinated approach (Instrument or Visual) prior to handoff to PF ADC, unless PF ADC nominates a restriction.  
@@ -135,7 +208,6 @@ VFR aircraft require a level readback.
 
 ### EDN ADC
 #### Departures
-
 Aircraft departing YPED in to AD TCU Class C will be coordinated from **EDN ADC** at Taxi.
 
 !!! example

@@ -177,20 +177,49 @@ If due to weather, overflying aircraft, runway config changes, etc. Auto Release
 **Voiceless** for aircraft landing at main airport (eg YMML in ML TCU), assigned a STAR, and standard assignable level.  
 
 Heads-up coordinate all other aircraft by **20nm** to boundary.
+
 ### TCU -> ENR
 **Voiceless** for aircraft assigned lower of standard assignable level or RFL, and tracking via a Procedural SID terminus.
 
 Heads-up coordinate all other aircraft by the boundary.
-### ENR -> Oceanic
-Heads-up coordinate prior to **15 mins** to boundary.
-### Oceanic -> ENR
-Heads-up coordinate prior to **15 mins** to boundary.
-### Oceanic -> Oceanic
-Heads-up coordinate prior to **30 mins** to boundary (**15 mins** to Australia and New Zealand units).
 
-#### Format
-Coordination between **Australian** units shall be done in the [Standard Heads-up format](#heads-up).
+### ENR -> ENR
+**Voiceless**, no changes to route or CFL within **50nm** to boundary.
 
+!!! exception
+    Except as amended by Local Instructions.
+
+### To/from Oceanic/International Units
+
+#### Pacific Units
+For aircraft going between the following FIRs in Oceanic Airspace only:  
+- YBBB  
+- YMMM  
+- NFFF  
+- AGGG  
+- ANAU  
+- NZZO  
+- NZCM  
+- KZAK  
+- NTTT  
+- AYPM  
+- NWWW  
+- NVVV
+
+**Voiceless**, no changes to route or CFL within **15 mins** of boundary.
+
+#### Other Units
+For aircraft going to the following FIRs:  
+- WAAF  
+- WIIF  
+- VCCF  
+- VRMF  
+- FIMM  
+- FAJO
+
+Heads-up coordinate prior to **30 mins** to boundary.
+
+##### Format
 Coordination to **International** units shall be done in the following format:
 
 - *"Estimate"*
@@ -203,11 +232,10 @@ Coordination to **International** units shall be done in the following format:
 !!! example
     <span class="coldline">**IND** -> **FIMM CTR**</span>: "Estimate, QFA63, IBMAT time 33, F360"  
     <span class="coldline">**FIMM CTR** -> **IND**</span>: "QFA63, F360"
-### ENR -> ENR
-**Voiceless**, no changes to route or CFL within **50nm** to boundary.
 
-!!! note
-    Except as amended by Local Instructions.
+### OCTA Coordination
+For any aircraft transiting **to or from** Uncontrolled airspace (ie: Class G, VFR Class E), heads-up coordination is **not required**. However, a **5 minute** change parameter applies to any aircraft that change level, route, or taxi within **5 minutes** of the next sector's airspace.
+
 ## Handoffs
 Receiving a handoff means you are permitted to turn an aircraft **45 degrees left or right**, and **climb/descend it to any level** without coordination. Do not handoff an aircraft to another sector if a turn of 45 degrees or a change of level would cause a conflict with any of your own aircraft. Or alternatively, you can nominate a restriction prior to handoff.
 

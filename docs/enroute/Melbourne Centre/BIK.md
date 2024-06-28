@@ -11,19 +11,35 @@
 | Wollongong† | Melbourne Centre | 125.000 | ML-WOL_CTR |
 | Gundagai† | Melbourne Centre | 128.400 | ML-GUN_CTR |
 
-† *Non-standard positions* may only be used in accordance with [VATPAC Ratings and Controller Positions Policy](https://vatpac.org/publications/policies)
+† *Non-standard positions* may only be used in accordance with [VATPAC Air Traffic Services Policy](https://vatpac.org/publications/policies)
+
+### CPDLC
+
+The Primary Communication Method for BIK is Voice.
+
+[CPDLC](../../controller-skills/cpdlc.md) may be used in lieu when applicable.
+
+The CPDLC Station Code is `YBIK`.
+
+!!! tip
+        Even though BIK's Primary Communication Method is Voice, CPDLC may be used for Overfliers.
 
 ## Airspace
-BIK assumes responsibility of the airspace within 45nm of SY DME above `FL285`.  
-GUN BIK assumes responsibility of the airspace within the lateral limits of the CB TCU above `FL245`, except for the region to the south west, which is assumed by ELW(BLA).
-
-!!! note
-    BIK does not assume the CB TCU in the absence of a CB TCU controller. Assumption of the CB TCU is the responsibility of ELW(BLA). Controllers may choose to verbally coordinate the release of the CB TCU to either sector/subsector.
 
 <figure markdown>
 ![Bindook Airspace](../assets/bik.png){ width="700" }
   <figcaption>Bindook Airspace</figcaption>
 </figure>
+
+BIK assumes responsibility of the airspace within 45nm of SY DME above `FL285`.  
+GUN assumes responsibility of the airspace within the lateral limits of the CB TCU above `FL245`, except for the region to the south west, which is assumed by ELW(BLA).
+
+!!! note
+    BIK does not assume the CB TCU in the absence of a CB TCU controller. Assumption of the CB TCU is the responsibility of ELW(BLA). Controllers may choose to verbally coordinate the release of the CB TCU to either sector/subsector.
+
+### Reclassifications
+#### CB CTR
+When **CB TCU** is offline, CB TCU (Class C `SFC` to `A085`) reverts to Class G, and is administered by ELW(BLA).
 
 ## Sector Responsibilities
 ### Bindook (BIK)
@@ -87,25 +103,56 @@ Aircraft being transferred from the following sectors shall be given STAR Cleara
 
 ## Coordination
 ### SY TCU
-The Standard assignable level from BIK to SY TCU is:  
-`A100` for aircraft tracking via RIVET, and assigned the RIVET STAR  
-`A090` for aircraft tracking via ODALE, and assigned the ODALE STAR  
-
-All other aircraft must be voice coordinated to SY TCU prior to **20nm** from the boundary.
-
-The Standard Assignable level from SY TCU to WOL is the lower of `F280` or the `RFL`, and tracking via WOL NDB.
+#### Airspace
+SY TCU is responsible for the airspace within a 45nm radius of TESAT, `SFC` to `F285`.
 
 Refer to [Sydney TCU Airspace Division](../../../terminal/sydney/#airspace-division) for information on airspace divisions when **SAS**, **SDN**, **SDS** and/or **SRI** are online.
 
-### CB TCU
-The Standard assignable level from WOL to CB TCU is `F120`, and assigned the RAZZI STAR, BUNGO STAR, or AVBEG STAR STAR.  
+#### Arrivals/Overfliers
+Voiceless for all aircraft:
 
-All other aircraft must be voice coordinated to CB TCU prior to **20nm** from the boundary.
+- With ADES **YSSY**; and  
+- Assigned a STAR; and  
+- Tracking via **RIVET**, assigned `A100`; or  
+- Tracking via **ODALE**, assigned `A090`
+
+All other aircraft coming from BIK CTA must be **Heads-up** Coordinated to SY TCU prior to **20nm** from the boundary.
+
+#### Departures
+Voiceless for all aircraft:
+
+- Tracking via the WOL NDB; and  
+- Assigned the lower of `F280` or the `RFL`
+
+All other aircraft going to BIK CTA will be **Heads-up** Coordinated by SY TCU.
+
+### CB TCU
+#### Airspace
+The Vertical limits of the CB TCU are `SFC` to `F245`.
+
+Refer to [Canberra TCU Airspace Division](../../../terminal/canberra/#airspace-division) for information on airspace divisions when **CBW** is online.
+
+Refer to [Reclassifications](#cb-ctr) for operations when CB TCU is offline.
+
+#### Arrivals/Overfliers
+Voiceless for all aircraft:
+
+- With ADES **YSCB**; and  
+- Assigned a STAR; and  
+- Assigned `F130`
+
+All other aircraft coming from BIK CTA must be **Heads-up** Coordinated to CB TCU prior to **20nm** from the boundary.
 
 !!! note
     These coordination requirements apply to aircraft entering the CB TCU, even if the airspace is owned by ELW/BLA
 
-The Standard Assignable level from CB TCU to GUN is the lower of `F240` or the `RFL`, and tracking via AVBEG, AKMIR, or CULIN.
+#### Departures
+Voiceless for all aircraft:
+ 
+- Tracking via **AVBEG**, **AKMIR**, or **CULIN**; and  
+- Assigned the lower of `F240` or the `RFL`
+
+All other aircraft going to BIK CTA will be **Heads-up** Coordinated by CB TCU.
 
 ### Enroute
 As per [Standard coordination procedures](../../../controller-skills/coordination/#enr-enr), Voiceless, no changes to route or CFL within **50nm** to boundary.
@@ -116,20 +163,7 @@ That being said, it is *advised* that BIK give **Heads-up Coordination** to the 
 Changes to the CFL are permitted up to the boundary for aircraft transiting BIK/GUN/WOL airspace internally. It is *advised* that BIK/WOL/GUN give **Heads-up Coordination** to the relevant sector, prior to **20nm** from the boundary, for **any aircraft not on the Q29, Y59, W113, or V169 airways**. 
 
 ### NW TCU
-#### Departures
-Departures from YSNW in to WOL Class C will be coordinated at taxi, and will be requesting a level.
-
-!!! example
-    <span class="coldline">**NW TCU** -> **WOL**</span>: "Taxi, PSDN18 for YMCO via URBOB, Requesting F130"  
-    <span class="coldline">**WOL** -> **NW TCU**</span>: "PSDN18, F130"  
-    <span class="coldline">**NW TCU** -> **WOL**</span>: "F130, PSDN18"  
-
-#### Arrivals/Overfliers
-All aircraft transiting from WOL to **NW TCU** must be heads-up coordinated prior to **20nm** from the boundary. Operations within **NW TCU** are fairly ad-hoc, so there are no standard assignable levels, simply whatever the WOL and **NW TCU** controller agree on.
-
-!!! example
-    <span class="hotline">**WOL** -> **NW TCU**</span>: "via CB, SKJ, with your concurrence, will be assigned descent to A090"  
-    <span class="hotline">**NW TCU** -> **WOL**</span>: "SKJ, concur A090"  
+Reserved.
 
 ### TSN (Oceanic)
-As per [Standard Coordination Procedures](../../../controller-skills/coordination/#enr-oceanic), Heads-up coordinate prior to **15 mins** to boundary.
+As per [Standard coordination procedures](../../../controller-skills/coordination/#pacific-units), Voiceless, no changes to route or CFL within **15 mins** to boundary.

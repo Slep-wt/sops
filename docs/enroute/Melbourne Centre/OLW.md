@@ -15,19 +15,32 @@
 | Mount† | Melbourne Centre | 133.700 | ML-MTK_CTR |
 | Menzies† | Melbourne Centre | 134.300 | ML-MZI_CTR |
 
-† *Non-standard positions* may only be used in accordance with [VATPAC Ratings and Controller Positions Policy](https://vatpac.org/publications/policies)
+† *Non-standard positions* may only be used in accordance with [VATPAC Air Traffic Services Policy](https://vatpac.org/publications/policies)
+
+### CPDLC
+
+The Primary Communication Method for OLW is [CPDLC](../../controller-skills/cpdlc.md).
+
+The CPDLC Station Code is `YOLW`.
+
+Voice may be used in lieu when applicable.
+
 ## Airspace
-OLW is responsible for **POT**, **PAR**, **NEW**, **MEK**, **MTK** and **MZI** when they are offline.  
 
 <figure markdown>
 ![Onslow Airspace](../assets/olw.png){ width="700" }
   <figcaption>Onslow Airspace</figcaption>
 </figure>
 
+OLW is responsible for **POT**, **PAR**, **NEW**, **MEK**, **MTK** and **MZI** when they are offline.  
+
+### Reclassifications
+#### KA CTR
+When **KA ADC** is offline, KA CTR (Class D `SFC` to `A055`) reverts to Class G, and is administered by OLW. Alternatively, OLW may provide a [top-down procedural service](../../../aerodromes/Karratha) if they wish.
+
 ## Sector Responsibilities
 OLW is responsible for issuing descent and ascertaining arrival intentions for aircraft bound for YPKA.
-
-Regardless of the status of KA ADC, OLW operates the Karratha Class E airspace `A055` and above. When KA ADC is offline, the Class D airspace below `A055` is reclassified Class G.
+OLW is also responsible for sequencing and issuing descent to aircraft bound for YPLM.
 
 ## STAR Clearance Expectation
 ### Handoff
@@ -46,6 +59,11 @@ As per [Standard coordination procedures](../../../controller-skills/coordinatio
 As per [Standard coordination procedures](../../../controller-skills/coordination/#enr-enr), Voiceless, no changes to route or CFL within **50nm** to boundary.
 
 ### KA ADC
+#### Airspace
+KA ADC is responsible for the Class D airspace in the KA CTR `SFC` to `A055`.
+
+Refer to [Reclassifications](#ka-ctr) for operations when KA ADC is offline.
+
 #### Departures
 Departures from YPKA in to OLW CTA will be coordinated when ready for departure.  
 
@@ -64,12 +82,22 @@ YPKA arrivals shall be heads-up coordinated to **KA ADC** from OLW prior to **5 
 
 The Standard Assignable level from OLW to KA ADC is `A060`, any other level must be prior coordinated.
 
-#### Overfliers
-Any aircraft that will enter KA ADC airspace, and not landing at YPKA, must be Heads-up coordinated prior to **5 mins** from the boundary.
+### LM TCU
+#### Airspace
+The limits of the LM TCU are `SFC` to `F280` within 40 DME LM. This may be amended by NOTAM.
 
-!!! example
-    <span class="hotline">**OLW** -> **KA ADC**</span>: "via BORAT, QQK"  
-    <span class="hotline">**KA ADC** -> **OLW**</span>: "QQK, A030"
+#### Arrivals/Overfliers
+The Standard assignable level from OLW to LM TCU is `F130`, tracking via LM VOR.
+
+All other aircraft must be voice coordinated to LM TCU prior to **20nm** from the boundary.
+
+#### Departures
+The Standard Assignable level from LM TCU to OLW is `F240`, and tracking via their planned route.
+
+#### LM ADC
+When LM TCU is offline, coordination is not required between OLW and LM ADC. Aircraft entering LM ADC airspace shall be handed off, and instructed to contact LM ADC for onwards clearance.
+
+LM ADC owns the Class C airspace within the LM CTR from `SFC` to `A015`.
 
 ### IND,INE (Oceanic)
-As per [Standard Coordination Procedures](../../../controller-skills/coordination/#enr-oceanic), Heads-up coordinate prior to **15 mins** to boundary.
+As per [Standard coordination procedures](../../../controller-skills/coordination/#pacific-units), Voiceless, no changes to route or CFL within **15 mins** to boundary.

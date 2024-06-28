@@ -13,36 +13,78 @@
 | Brisbane Departures North†    |BDN| Brisbane Departures  | 133.450         | BN_DEP          |
 | Brisbane Departures South†   |BDS| Brisbane Departures | 118.450          | BN-S_DEP         |
 | Gold Coast Approach† |BAC| Brisbane Approach  | 123.500          | BN-C_APP       |
-| Brisbane Flow†        |BFL|                |          | BN-FLW_CTR                               |
+| Brisbane Flow†        |BFL|                |          | BN_FMP                              |
 
-† *Non-standard positions* may only be used in accordance with [VATPAC Ratings and Controller Positions Policy](https://vatpac.org/publications/policies)
+† *Non-standard positions* may only be used in accordance with [VATPAC Air Traffic Services Policy](https://vatpac.org/publications/policies){target=new}
 
 ## Airspace
 The Vertical limits of the BN TCU are `SFC` to `F180`, except in BAC airspace, where it is `SFC` to `A075` in the North West, and `SFC` to `F125` in the South East.
 
-AF CTR reverts to Class G when **AF ADC** is offline, and is administered by the relevant BN TCU controller.  
+### Reclassifications
+#### AF CTR
+AF CTR reverts to Class G when **AF ADC** is offline, and is administered by the relevant BN TCU controller.
+
+See also: [AF ADC Offline](#af-adc-offline).
+
+#### CG CTR
+If BN TCU elects not to provide top-down to YBCG, The CG CTR Class C airspace `SFC` to `A035` reverts to Class G when **CG ADC** is offline, and is administered by the relevant BN TCU controller.
+
+See also: [CG ADC Offline](#cg-adc-offline).
   
 ### Airspace Structural Arrangements
-Pursuant to Section 3 of the [VATPAC Ratings and Controller Positions Policy](https://cdn.vatpac.org/documents/policy/Controller+Positions+and+Ratings+Policy+v5.2.pdf), **“North”**/**”West”** positions shall assume the airspace of corresponding **“South”**/**”East”** positions when the latter are inactive (e.g. **BAN** assumes **BAS** airspace), and vice versa.
+Pursuant to Section 3 of the [VATPAC Air Traffic Services Policy](https://cdn.vatpac.org/documents/policy/Controller+Positions+and+Ratings+Policy+v5.2.pdf), **“North”**/**”West”** positions shall assume the airspace of corresponding **“South”**/**”East”** positions when the latter are inactive (e.g. **BAN** assumes **BAS** airspace), and vice versa.
+
+### Airspace Division
+The divisions of the airspace between **BAN**, **BAS**, **BDS**, **BDN**, and **BAC** change based on the Runway Mode.
+
+!!! note
+    The following diagrams do not include non BN TCU areas of responsibility such as AF CTR or CG ADC
+
+#### 01 PROPS
+<figure markdown>
+![01 PROPS TCU Structure](img/bn01props.png){ width="700" }
+  <figcaption>01 PROPS TCU Structure</figcaption>
+</figure>
+
+#### 19 PROPS
+<figure markdown>
+![19 PROPS TCU Structure](img/bn19props.png){ width="700" }
+  <figcaption>19 PROPS TCU Structure</figcaption>
+</figure>
+
+#### SODPROPS
+<figure markdown>
+![SODPROPS TCU Structure](img/bnsodprops.png){ width="700" }
+  <figcaption>SODPROPS TCU Structure</figcaption>
+</figure>
 
 ## Parallel Runway Operations
 Refer to [Parallel Runway Separation Standards](../../separation-standards/parallelapps) for more information
+
 ### Runway Selection
 Aircraft shall be assigned the following runways for arrival when PROPS are in progress:
 
-| Aircraft tracking | Runway  |
-| ----------------| --------- |
-| via BLAKA   | 01R/19L     |
-| via ENLIP | 01L/19R |
-| via GOMOL | 01R/19L |
-| via MORBI | 01L/19R |
-| via SMOKA | 01L/19R |
-| via TEBOT | 01R/19L |
-| via UGTUG | 01R/19L |
-| via WOODY | 01L/19R |
+| FF | Runway |
+| ---- | -------- |
+| BLAKA | 01R/19L |
+| GOMOL | 01R/19L |
+| UGTUG | 01R/**19R** |
+| TEBOT | 01R/**19R** |
+| MORBI | 01L/19R |
+| SMOKA | 01L/19R |
+| WOODY | 01L/19R |
+| ENLIP | 01L/**19L** |
 | Other aircraft: |
 | From the NORTH and WEST | 01L/19R |
 | From the SOUTH and EAST | 01R/19L |
+
+These standard runway assignments may be modified strategically by the BAS or BFL controller.
+
+!!! example
+    If during an event, the vast majority of traffic is coming from **BLAKA** and **GOMOL** feeder fixes, BAS/BFL may elect to assign 19L to **BLAKA** arrivals and 19R to **GOMOL** arrivals, to keep them separated at all times.
+
+    <span class="hotline">**BFL** -> **INL**</span>: "All arrivals via GOMOL to be assigned 19R until further notice"  
+    <span class="hotline">**INL** -> **BFL**</span>: "Roger, Arrivals via GOMOL to be assigned 19R" 
 
 ### Independent Visual Approach Phraseology at Night
 *"CLEARED INDEPENDENT VISUAL APPROACH RUNWAY (number), NOT BELOW (altitude) UNTIL ESTABLISHED ON THE PAPI (or GLIDEPATH)"*
@@ -59,57 +101,59 @@ Due to the low level of CTA (`A015`) in the AF CTR when **AF ADC** is offline, i
     **BN TCU**: "ABC, Cleared to YBSU via BN, Flight Planned Route. Make Visual right turn DCT BN, Climb to A030"  
     **ABC**: "Cleared to YBSU via BN, Flight Planned Route. Make Visual right turn DCT BN, Climb to A030, ABC"
 
-## Airspace Division
-The divisions of the airspace between **BAN**, **BAS**, **BDS**, **BDN**, and **BAC** change based on the Runway Mode.
+## CG ADC Offline
+Due to the low level of CTA (`A035`) in the CG CTR when **CG ADC** is offline, it is best practice to give airways clearance to aircraft at the holding point, to ensure departing aircraft can have uninterrupted climb.
 
-!!! note
-    The following diagrams do not include non BN TCU areas of responsibility such as AF CTR or CG ADC
+!!! example
+    **JST446**: "Brisbane Approach, JST446, A320, IFR, Taxiing YBCG for YSSY, Runway 214"   
+    **BN TCU**: "JST446, Brisbane Approach, Squawk 3601, No Reported IFR Traffic, Report Ready at the Holding Point for Airways Clearance"  
+    **JST446**: "Squawk 3601, Wilco, JST446"  
 
-### 01 PROPS
-<figure markdown>
-![01 PROPS TCU Structure](img/bn01props.png){ width="700" }
-  <figcaption>01 PROPS TCU Structure</figcaption>
-</figure>
-
-### 19 PROPS
-<figure markdown>
-![19 PROPS TCU Structure](img/bn19props.png){ width="700" }
-  <figcaption>19 PROPS TCU Structure</figcaption>
-</figure>
-
-### SODPROPS
-<figure markdown>
-![SODPROPS TCU Structure](img/bnsodprops.png){ width="700" }
-  <figcaption>SODPROPS TCU Structure</figcaption>
-</figure>
+    **JST446**: "JST446, Ready Runway 14, Request clearance"  
+    **BN TCU**: "JST446, Cleared to YSSY via APAGI, Flight Planned Route. Climb to A060"  
+    **JST446**: "Cleared to YSSY via APAGI, Flight Planned Route. Climb to A060, JST446"
 
 ## Coordination
 ### Enroute
 #### Departures
-The Standard Assignable level for YBBN departures from BN TCU to **INL(All)** is the lower of `F180` or the `RFL`, and tracking via a **Procedural** SID terminus.  
-The Standard Assignable level for YBCG departures from BN TCU to **GOL/SDY** is the lower of `F120` or the `RFL`, and tracking via **APAGI**.  
-The Standard Assignable level for YBCG departures from BN TCU to **NSA/BUR/DOS** is the lower of `F180` or the `RFL`, and tracking via a **Procedural** SID terminus.  
-The Standard Assignable level for YBSU arrivals from BN TCU to **NSA** is `F130`, and tracking via **ITIDE**.  
+Voiceless for aircraft:
 
-Any aircraft not meeting the above criteria must be prior coordinated to ENR.
+- With ADEP **YBBN**  
+    - Tracking via a Procedural SID terminus; and  
+    - Assigned the lower of `F180` or the `RFL`  
+- With ADEP **YBCG**  
+    - Tracking via **APAGI** and assigned the lower of `F120` or the `RFL`; or    
+    - Tracking via **BN** and assigned the lower of `F180` or the `RFL`  
+- With ADES **YBSU**  
+    - Assigned the **ITIDE** STAR; and  
+    - Assigned `F130`
+
+All other aircraft going to INL CTA must be **Heads-up** Coordinated by BN TCU prior to the boundary. This includes YBCG departures to the North that clip INL(GOL) airspace before re-entering BN TCU airspace
 
 !!! example
-    <span class="hotline">**BN TCU** -> **INL**</span>: "via GOMOL, BNZ123, with your concurrence, will be assigned F150, for my separation with ZYX"  
-    <span class="hotline">**INL** -> **BN TCU**</span>: "BNZ123, concur F150"  
+    <span class="hotline">**BAC** -> **GOL**</span>: "Departing YBCG, X4C, do you have any Restrictions or Requirements?"  
+    <span class="hotline">**GOL** -> **BAC**</span>: "X4C, No Restrictions or Requirements"  
 
 #### Arrivals
-The Standard assignable level from INL(All) to BN TCU is:  
-`A090` for YBBN arrivals, and assigned a STAR  
-`F130` for YBCG arrivals via BERNI, and assigned a STAR  
+Voiceless for all aircraft:
 
-All other aircraft must be voice coordinated to BN TCU.
+- With ADES **YBBN** or **YBCG**; and  
+- Assigned a STAR; and  
+- Assigned `A090` for **YBBN** arrivals; or  
+- Assigned `F130` for **YBCG** arrivals
+
+Additionally, Voiceless coordination may be used for **YBCG** arrivals tracking via **BN** and assigned `F190`.
+
+All other aircraft coming from INL CTA will be **Heads-up** Coordinated to BN TCU.
 
 ### BN ADC
 #### Auto Release
 'Next' coordination is **not** required from BN ADC for aircraft that are:   
-  a) Departing from a runway nominated on the ATIS (except during SODPROPS*); and  
+  a) Departing from a runway nominated on the ATIS (except during SODPROPS^); and  
   b) Assigned the standard assignable level; and  
   c) Assigned a **Procedural** SID  
+
+^Auto Release is not available during SODPROPS runway mode. All aircraft will be coordinated from BN ADC to BN TCU.
 
 !!! example
     <span class="hotline">**BN ADC** -> **BN TCU**</span>: "Next, ABC, runway 19L"  
@@ -121,8 +165,13 @@ For Jets: `A060`
 For Non-Jets: The lower of `A040` or the `RFL`
 
 ### CG ADC
+#### Airspace
+CG ADC is responsible for the Class C Airspace within the CG CTR `SFC` to `A015`.
+
+Refer to [Reclassifications](#cg-ctr) for operations when CG ADC is offline.
+
 #### Auto Release
-'Next' coordination is **not** required fro CG ADC for aircraft that are:   
+'Next' coordination is **not** required from CG ADC for aircraft that are:   
   a) Departing from a runway nominated on the ATIS; and  
   b) Assigned the standard assignable level; and  
   c) Assigned a **Procedural** SID
@@ -139,6 +188,11 @@ For Jets: `A060`
 For Non-Jets: The lower of `A060` or the `RFL`
 
 ### AF ADC
+#### Airspace
+AF ADC is responsible for the Class D Airspace within the AF CTR `SFC` to `A015`.
+
+Refer to [Reclassifications](#af-ctr) for operations when AF ADC is offline.
+
 ### Departures
 When aircraft planned via a CTA departure are ready for takeoff and expected to depart imminently, **AF ADC** shall seek release of the aircraft through a 'Next' call.
 
@@ -159,22 +213,18 @@ VFR aircraft require a level readback.
     <span class="hotline">**AF ADC** -> **BN TCU**</span>: "UJE, visual approach"
 
 ### AMB TCU
-
-#### Departures
-Departures from YAMB in to BN TCU Class C will be coordinated at taxi, and will be requesting a level.
+All aircraft transiting from **BN TCU** to **AMB TCU** and vice versa must be heads-up coordinated prior to the boundary. 
 
 !!! example
-    <span class="coldline">**AMB TCU** -> **BN TCU**</span>: "Taxi, FALC22 for YSRI via GOMOL, Requesting F340"  
-    <span class="coldline">**BN TCU** -> **AMB TCU**</span>: "FALC22, F180"  
-    <span class="coldline">**AMB TCU** -> **BN TCU**</span>: "F180, FALC22"  
+    <span class="hotline">**AMB TCU** -> **BN TCU**</span>: "via BN, DRGN02"  
+    <span class="hotline">**BN TCU** -> **AMB TCU**</span>: "DRGN02, `F140`"  
 
-#### Arrivals/Overfliers
-All aircraft transiting from BN TCU to **AMB TCU** must be heads-up coordinated prior to **20nm** from the boundary. Operations within **AMB TCU** are fairly ad-hoc, so there are no standard assignable levels, simply whatever the BN TCU and **AMB TCU** controller agree on.
+For aircraft arriving into AMB TCU there is no standard assignable level and simply is what ever the controllers agree upon.
 
 !!! example
     <span class="hotline">**BN TCU** -> **AMB TCU**</span>: "via WACKO, STAL13, what level can I assign?"  
-    <span class="hotline">**AMB TCU** -> **BN TCU**</span>: "STAL13, A050"  
-    <span class="hotline">**BN TCU** -> **AMB TCU**</span>: "A050, STAL13"  
+    <span class="hotline">**AMB TCU** -> **BN TCU**</span>: "STAL13, `A090`"  
+    <span class="hotline">**BN TCU** -> **AMB TCU**</span>: "`A090`, STAL13"  
 
 ### SU ADC
 BN TCU Class G shares a tiny border with **SU ADC**, however there are no SIDs, STARs, or airways through this gap. The only possible way for an aircraft to directly enter SU ADC airspace from BN TCU's jurisdiction, is from Class G, and as such, no coordination is required to **SU ADC**. However, ensure the aircraft is transferred to the ADC at least **10nm** prior to the boundary, to facilitate their airways clearance.

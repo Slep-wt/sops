@@ -11,16 +11,32 @@
 | Benalla† | Melbourne Centre | 132.200 | ML-BLA_CTR |
 | Snowy† | Melbourne Centre | 124.000 | ML-SNO_CTR |
 
-† *Non-standard positions* may only be used in accordance with [VATPAC Ratings and Controller Positions Policy](https://vatpac.org/publications/policies)
+† *Non-standard positions* may only be used in accordance with [VATPAC Air Traffic Services Policy](https://vatpac.org/publications/policies)
+
+### CPDLC
+
+The Primary Communication Method for ELW is Voice.
+
+[CPDLC](../../controller-skills/cpdlc.md) may be used in lieu when applicable.
+
+The CPDLC Station Code is `YELW`.
+
+!!! tip
+        Even though ELW's Primary Communication Method is Voice, CPDLC may be used for Overfliers.
 
 ## Airspace
-When **CB TCU** is offline, CB TCU (Class C `SFC` to `F245`) reverts to Class G, and is administered by BLA. Alternatively, BLA may provide a [top-down approach service](../../../terminal/canberra) if they wish.  
-When **AY ADC** is offline, AY CTR (Class D and C `SFC` to `A085`) reverts to Class G, and is administered by BLA. Alternatively, BLA may provide a [top-down procedural service](../../../aerodromes/Albury) if they wish.
 
 <figure markdown>
 ![Eildon Weir Airspace](../assets/elw.png){ width="700" }
   <figcaption>Eildon Weir Airspace</figcaption>
 </figure>
+
+### Reclassifications
+#### CB CTR
+When **CB TCU** is offline, CB TCU (Class C `SFC` to `A085`) reverts to Class G, and is administered by BLA. Alternatively, BLA may provide a [top-down approach service](../../../terminal/canberra) if they wish.
+
+#### AY CTR
+When **AY ADC** is offline, AY CTR (Class D and C `SFC` to `A085`) reverts to Class G, and is administered by BLA. Alternatively, BLA may provide a [top-down procedural service](../../../aerodromes/Albury) if they wish.
 
 ## Sector Responsibilities
 ### Eildon Weir (ELW)
@@ -54,6 +70,7 @@ Aircraft being transferred to the following sectors shall be told to Expect STAR
 | ELW | BLA | YSCB | |
 | SNO | HUO | YMHB | |
 | BLA | ELW | YMML | Non-Jets only |
+| SNO | YWE(WON) | YMML | |
 
 ### First Contact
 Aircraft being transferred from the following sectors shall be given STAR Clearance on first contact:
@@ -67,20 +84,53 @@ Aircraft being transferred from the following sectors shall be given STAR Cleara
 
 ## Coordination
 ### CB TCU
-The Standard assignable level from BLA to CB TCU is `F130`, and assigned the POLLI STAR or MANDA STAR.  
+#### Airspace
+The Vertical limits of the CB TCU are `SFC` to `F245`.
 
-All other aircraft must be voice coordinated to CB TCU prior to **20nm** from the boundary.
+Refer to [Canberra TCU Airspace Division](../../../terminal/canberra/#airspace-division) for information on airspace divisions when **CBW** is online.
 
-The Standard Assignable level from CB TCU to BLA is the lower of `F240` or the `RFL`, and tracking via HOWLY, WG, NONUP, TANTA, or DUBUS.
+Refer to [Reclassifications](#cb-ctr) for operations when CB TCU is offline.
+
+#### Arrivals/Overfliers
+Voiceless for all aircraft:
+
+- With ADES **YSCB**; and  
+- Assigned a STAR; and  
+- Assigned `F130`
+
+All other aircraft coming from BLA CTA must be **Heads-up** Coordinated to CB TCU prior to **20nm** from the boundary.
+
+#### Departures
+Voiceless for all aircraft:
+ 
+- Tracking via a Procedural SID terminus; and  
+- Assigned the lower of `F240` or the `RFL`
+
+All other aircraft going to BLA CTA will be **Heads-up** Coordinated by CB TCU.
 
 ### ML TCU
-The Standard assignable level from ELW to ML TCU is `A090`, and assigned the LIZZI STAR or BOYSE STAR.  
-
-All other aircraft must be voice coordinated to ML TCU prior to **20nm** from the boundary.
-
-The Standard Assignable level from ML TCU to ELW is the lower of `F240` or the `RFL`, and tracking via MNG, NONIX, or DOSEL.
+#### Airspace
+The Vertical limits of the ML TCU are `SFC` to `F245`.
 
 Refer to [Melbourne TCU Airspace Division](../../../terminal/melbourne/#airspace-division) for information on airspace divisions when **MDN** and/or **MDS** are online.
+
+#### Arrivals/Overfliers
+Voiceless for all aircraft:
+
+- With ADES **YMML**; and  
+- Assigned a STAR; and  
+- Assigned `A090`
+
+All other aircraft coming from ELW CTA must be **Heads-up** Coordinated to ML TCU prior to **20nm** from the boundary.
+
+#### Departures
+Voiceless for all aircraft:
+
+- Tracking via **MNG**, **NONIX**, or **DOSEL**; and  
+- Assigned the lower of `F240` or the `RFL`
+
+All other aircraft going to ELW CTA will be **Heads-up** Coordinated by ML TCU.
+
 ### Enroute
 As per [Standard coordination procedures](../../../controller-skills/coordination/#enr-enr), Voiceless, no changes to route or CFL within **50nm** to boundary.
 
@@ -101,27 +151,15 @@ That being said, it is *advised* that ELW/BLA/SNO give **Heads-up Coordination**
 - BLA to ELW for aircraft **not** on the Q29 or V169 airway (Changes permitted up to boundary for sequencing/descent purposes)  
 - SNO to BLA for all aircraft
 
-### ESL TCU
-#### Airspace
-By default, **ESL TCU** owns the airspace within 30nm ESL, `SFC` to `F200`, unless stated otherwise by ad-hoc release or NOTAM.
-#### Departures
-Departures from YMES in to ELW(All) Class C will be coordinated at taxi, and will be requesting a level.
-
-!!! example
-    <span class="coldline">**ESL TCU** -> **SNO**</span>: "Taxi, ALDN14 for YSWG via VALDU, Requesting F210"  
-    <span class="coldline">**SNO** -> **ESL TCU**</span>: "ALDN14, F210"  
-    <span class="coldline">**ESL TCU** -> **SNO**</span>: "F210, ALDN14"  
-
-#### Arrivals/Overfliers
-All aircraft transiting from ELW(All) to **ESL TCU** must be heads-up coordinated prior to **20nm** from the boundary. Operations within **ESL TCU** are fairly ad-hoc, so there are no standard assignable levels, simply whatever the ELW(All) and **ESL TCU** controller agree on.
-
-!!! example
-    <span class="coldline">**ELW** -> **ESL TCU**</span>: "via MNG, BFRT21, will be assigned F220, BLA and myself have no restrictions on descent"  
-    <span class="coldline">**ESL TCU** -> **ELW**</span>: "BFRT21, F220"  
+### ES TCU
+Reserved.
 
 ### AY ADC
 #### Airspace
-**AY ADC** own the Class D airspace up to `A045`. BLA own the Class C steps in the "AY keyhole" between `A045` and `A085`.
+AY ADC is responsible for the Class D airspace in the AY CTR `SFC` to `A045`.
+
+Refer to [Reclassifications](#ay-ctr) for operations when AY ADC is offline.
+
 #### Departures
 Departures from YMAY in to BLA Class C will be coordinated when ready for departure.
 
@@ -137,16 +175,9 @@ YMAY arrivals shall be heads-up coordinated to **AY ADC** from BLA prior to **5 
 
 !!! example
     <span class="hotline">**BLA** -> **AY ADC**</span>: "via VEGRU1 arrival, QLK38"  
-    <span class="hotline">**AY ADC** -> **BLA**</span>: "QLK38" 
+    <span class="hotline">**AY ADC** -> **BLA**</span>: "QLK38, VEGRU1 arrival" 
 
 The Standard Assignable level from BLA to **AY ADC** is `A080`.
 
-#### Overfliers
-Any aircraft that will enter AY ADC airspace, and not landing at YMAY, must be Heads-up coordinated prior to **5 mins** from the boundary.
-
-!!! example
-    <span class="hotline">**BLA** -> **AY ADC**</span>: "via AY, NGJ"  
-    <span class="hotline">**AY ADC** -> **BLA**</span>: "NGJ, A040"
-
 ### TSN (Oceanic)
-As per [Standard coordination procedures](../../controller-skills/coordination/#enr-oceanic), Heads-up coordinate prior to **15 mins** to boundary.
+As per [Standard coordination procedures](../../../controller-skills/coordination/#pacific-units), Voiceless, no changes to route or CFL within **15 mins** to boundary.

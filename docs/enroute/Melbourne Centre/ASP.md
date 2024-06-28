@@ -15,21 +15,43 @@
 | Bourke† | Melbourne Centre | 128.200 | ML-BKE_CTR |
 | Esperance† | Melbourne Centre | 123.950 | ML-ESP_CTR |
 
-† *Non-standard positions* may only be used in accordance with [VATPAC Ratings and Controller Positions Policy](https://vatpac.org/publications/policies)
+† *Non-standard positions* may only be used in accordance with [VATPAC Air Traffic Services Policy](https://vatpac.org/publications/policies){target=new}
+
+### CPDLC
+
+The Primary Communication Method for ASP is [CPDLC](../../controller-skills/cpdlc.md).
+
+The CPDLC Station Code is `YASP`.
+
+Voice may be used in lieu when applicable.
 
 ## Airspace
-**AS ADC** is responsible for the Class D airspace `SFC` to `A045`, as well as the Class C airspace `A045` to `A065`, within the AS CTR.
-
-When **AS ADC** is offline, AS CTR (Class D and C `SFC` to `F125`) within 80 DME AS reverts to Class G, and AS CTR (Class C `F125` to `F245`) within 80 DME AS reverts to Class E, and both are administered by ASP. Alternatively, ASP may provide a [top-down procedural service](../../../aerodromes/Alice) if they wish.
 
 <figure markdown>
 ![Alice Springs Airspace](../assets/asp.png){ width="700" }
   <figcaption>Alice Springs Airspace</figcaption>
 </figure>
 
+**AS ADC** is responsible for the Class D airspace `SFC` to `A045`, as well as the Class C airspace `A045` to `A065`, within the AS CTR.
+
+### Reclassifications
+#### AS CTR
+When **AS ADC** is offline, AS CTR (Class D and C `SFC` to `F125`) within 80 DME AS reverts to Class G, and AS CTR (Class C `F125` to `F245`) within 80 DME AS reverts to Class E, and both are administered by ASP. Alternatively, ASP may provide a [top-down procedural service](../../../aerodromes/Alice) if they wish.
+
 ## Extending
 !!! Warning
-    As per [VATPAC Ratings and Controller Positions Policy](https://cdn.vatpac.org/documents/policy/Controller+Positions+and+Ratings+Policy+v5.2.pdf), ML-ASP_CTR is only permitted to extend to adjacent **YMMM** sectors.
+    ML-ASP_CTR is only permitted to extend to adjacent **YMMM** sectors.
+
+## Surveillance Coverage
+Limited surveillance coverage exists in the FOR sector greater than **250nm** from ADSB stations. [Procedural Standards](../../../separation-standards/procedural/) must be implemented **prior** to losing surveillance coverage
+
+The **Orange** shaded areas will have limited surveillance coverage **Below F330**.  
+The **Red** shaded areas will have limited surveillance coverage at **All Levels**.
+
+<figure markdown>
+![Forest Surveillance Coverage](../assets/aspsurv.png){ width="700" }
+  <figcaption>Forest Surveillance Coverage</figcaption>
+</figure>
 
 ## STAR Clearance Expectation
 ### Handoff
@@ -40,7 +62,7 @@ Aircraft being transferred to the following sectors shall be told to Expect STAR
 | FOR, WRA, BKE | TBD(AUG) | YPAD, YPED | Jets only |
 | BKE | TBD | YPAD, YPED | |
 | ESP | PIY(HYD) | YPPH, YPEA | Jets only |
-| BKE | YWE(KAT) | YSSY | |
+| BKE | YWE(KAT, GTH) | YSSY | |
 
 ## Coordination
 ### Enroute
@@ -50,13 +72,18 @@ As per [Standard coordination procedures](../../../controller-skills/coordinatio
 As per [Standard coordination procedures](../../../controller-skills/coordination/#enr-enr), Voiceless, no changes to route or CFL within **50nm** to boundary.
 
 ### AS ADC
+#### Airspace
+AS ADC is responsible for the Class D airspace `SFC` to `A045`, as well as the Class C airspace `A045` to `A065`, within the AS CTR.
+
+Refer to [Reclassifications](#as-ctr) for operations when AS ADC is offline.
+
 #### Departures
 Departures from YBAS in to ASP Class C will be coordinated when ready for departure.
 
 !!! example
     <span class="hotline">**AS ADC** -> **ASP**</span>: "Next, QFA797"  
     <span class="hotline">**ASP** -> **AS ADC**</span>: "QFA797, Unrestricted"  
-    <span class="hotline">**AS ADC** -> **ASP**</span>: "Unrestricted, QFA797"  
+    <span class="hotline">**AS ADC** -> **ASP**</span>: "QFA797"  
 
 The Standard Assignable level from **AS ADC** to ASP is the lower of `A070` or the `RFL`, any other level must be prior coordinated.
 #### Arrivals
@@ -68,12 +95,10 @@ YBAS arrivals shall be heads-up coordinated to **AS ADC** from ASP prior to **5 
 
 The Standard Assignable level from ASP to **AS ADC** is `A080`, any other level must be prior coordinated.
 
-#### Overfliers
-Any aircraft that will enter AS ADC airspace, and not landing at YBAS, must be Heads-up coordinated prior to **5 mins** from the boundary.
+### WR ADC
+By default, WR ADC owns the **R222F** Restricted Area. This airspace has vertical limits of `SFC` to `F120`. When WR ADC is active, this airspace is classified as Class D.
 
-!!! example
-    <span class="hotline">**ASP** -> **AS ADC**</span>: "via AS, JDS"  
-    <span class="hotline">**AS ADC** -> **ASP**</span>: "JDS, A060"
+Coordination is not required between ASP(WRA) and WR ADC. Aircraft entering WR ADC airspace shall be handed off, and instructed to contact WR ADC for onwards clearance.
 
 ### IND(INS) (Oceanic)
-As per [Standard Coordination Procedures](../../../controller-skills/coordination/#enr-oceanic), Heads-up coordinate prior to **15 mins** to boundary.
+As per [Standard coordination procedures](../../../controller-skills/coordination/#pacific-units), Voiceless, no changes to route or CFL within **15 mins** to boundary.

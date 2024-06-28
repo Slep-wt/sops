@@ -8,18 +8,45 @@
 | -----| -- | -------- | --------- | ---------------- |
 | **Perth Approach** |**PHA**| **Perth Approach**  | **123.600** | **PH_APP**| 
 | Perth Departures†  |PHD| Perth Departures  | 118.700 | PH_DEP |
-| Perth Flow† | PHF |   |    | PH-FLW_CTR  |
+| Perth Flow† | PFL |   |    | PH_FMP  |
 
-† *Non-standard positions* may only be used in accordance with [VATPAC Ratings and Controller Positions Policy](https://vatpac.org/publications/policies)
+† *Non-standard positions* may only be used in accordance with [VATPAC Air Traffic Services Policy](https://vatpac.org/publications/policies){target=new}
 
 ## Airspace
-The PH TCU is responsible for the airspace within 36 DME of the PH VOR, `SFC` to `F245`. 
+The PH TCU is responsible for the airspace within 36 DME of the PH VOR, `SFC` to `F245`.  
 
-When **PEA TCU** is online R155A & B is released to them from `A020` to `F160`.  When R155A is active to `F160`, PH TCU airspace above R155A shall be released to **PEA TCU**.
+!!! note
+    A significant portion of the TMA airspace south of the PH VOR (roughly 20 DME onwards) is classified Class E with a lower limit of `F125`. RPT aircraft frequently enter/exit the TMA via this airspace, see [Departure Procedures](#departure-procedures) for more info.
 
-JT CTR reverts to Class G when **JT ADC** is offline, and is administered by the relevant PH TCU controller.      
+When **PEA TCU** is online R155A & B is released to them from `A020` to `F160`. When R155A is active to `F160`, PH TCU airspace above R155A shall be released to **PEA TCU**.
+
+### Reclassifications
+#### JT CTR
+JT CTR reverts to Class G when **JT ADC** is offline, and is administered by the relevant PH TCU controller.
+
+See also: [JT ADC Offline](#jtpea-adc-offline).
+
+### Airspace Division
+The divisions of the airspace between **PHA**, and **PHD** change based on the Runway Mode.
+
+!!! note
+    The following diagrams do not include non PH TCU areas of responsibility such as JT CTR or PEA APP
+
+#### 03/06
+<figure markdown>
+![03/06 TCU Structure](img/PH0306annotated.png){ width="700" }
+  <figcaption>03/06 TCU Structure</figcaption>
+</figure>
+
+#### 21/24
+<figure markdown>
+![21/24 TCU Structure](img/PH2124annotated.png){ width="700" }
+  <figcaption>21/24 TCU Structure</figcaption>
+</figure>
 
 ## Runway Modes
+Generally, YPPH operates on either the Southwest or Northeast runway plan, as below. Where strong winds dictate the use of only a single runway, this shall be nominated in the ATIS.
+
 ### Southwest Plan
 With the Southwest Plan active, all departures shall be assigned runway 21 by **PH ACD**. Arrivals shall be processed to either runway 21 or 24 based on their feeder fix, as per the table below:
 
@@ -28,12 +55,12 @@ With the Southwest Plan active, all departures shall be assigned runway 21 by **
 | JULIM | 21 |
 | SAPKO | 21 |
 | IPMOR | 21 |
-| BEVLY | 24 (or 21 if operationally required) |
-| GRENE | 24 |
+| KABLI | 24 (or 21 if operationally required) |
+| LAVEX | 24 |
 | SOLUS | 24 |
 
 ### Northeast Plan
-With the Northeast Plan active, departures via `AVNEX`, `OTLED`, `MANDU`, `SOLUS`, and `OPEGA` shall be assigned runway 03 by **PH ACD**. All other departures shall be assigned runway 06. All arrivals shall be processed to runway 03.
+With the Northeast Plan active, departures via `AVNEX`, `OTLED`, `OLMAM`, `SOLUS`, and `OPEGA` shall be assigned runway 03 by **PH ACD**. All other departures shall be assigned runway 06. All arrivals shall be processed to runway 03.
 
 ## Scenic Flights
 VFR aircraft may plan to conduct scenic flights within CTA in the PH TMA. A number of VFR routes exist to facilitate this, including:
@@ -58,80 +85,65 @@ Aircraft wishing to conduct a scenic flight over the Perth CBD should be cleared
 
 Aircraft departing YPPH and intending to conduct the Victor 65 route will be coordinated by **PH ACD**. See [Airways Clearances](#airways-clearances).
 
-## Arrival Procedures
-### YPJT Arrivals
-IFR RNAV equipped arrivals to Jandakot planned via a fix listed shall be cleared via STAR dependent on Perth active runway:
-
-| Perth Active Runway | 03/06 | 21/24 |
-| ------------------- | ----- | ----- |
-| **North**<br>JULIM (Jet)<br>SAPKO (Non-Jet) | <br>JT 2G / WOORA | <br>DCT JT |
-| **East**<br>BEVLY (Jet)<br>GRENE (Non-Jet)<br>HAMTN (Non-Jet) | <br>JT 2G / BEVLY<br>JT 2G / GRENE<br>JT 2W / HAMTN | <br>JT 2R / BEVLY<br>JT 2R / GRENE<br>N/A 
-
-### YPEA Arrivals
-
-Reserved
-
 ## JT/PEA ADC Offline
 Due to the low level of CTA at these aerodromes, it is best practice to give airways clearance to aircraft at the holding point, to ensure departing aircraft can have uninterrupted climb.
 
 !!! example
     **AAC**: "Perth Approach, AAC, PC12, POB 8, IFR, Taxiing YPJT for YPKG, Runway 06L"  
-    **PH TCU**: "AAC, Perth Approach, Squawk 3601, No Reported IFR Traffic, Report Ready at the Holding Point for Airways Clearance"  
+    **PHA**: "AAC, Perth Approach, Squawk 3601, No Reported IFR Traffic, Report Ready at the Holding Point for Airways Clearance"  
     **AAC**: "Squawk 3601, Wilco, AAC"   
 
     **AAC**: "AAC, Ready Runway 06L, Request clearance"  
-    **PH TCU**: "AAC, Cleared to YPKG via PH, Flight Planned Route. Make Visual Right turn DCT PH, Climb to A040"  
+    **PHA**: "AAC, Cleared to YPKG via PH, Flight Planned Route. Make Visual Right turn DCT PH, Climb to A040"  
     **AAC**: "Cleared to YPKG via PH, Flight Planned Route. Make Visual Right turn DCT PH, Climb to A040, AAC"
 
-## Airspace Division
+## Departure Procedures
+Aircraft departing the TMA to the south planned at `F130` or above will likely leave and re-enter CTA on climb. These aircraft should be instructed to leave and re-enter on climb to the standard assignable level (or other level as appropriate).
 
-The divisions of the airspace between **PHA**, and **PHD** change based on the Runway Mode.
-
-!!! note
-    The following diagrams do not include non PH TCU areas of responsibility such as JT CTR or PEA APP
-
-### 03/06
-<figure markdown>
-![03/06 TCU Structure](img/PH0306annotated.png){ width="700" }
-  <figcaption>03/06 TCU Structure</figcaption>
-</figure>
-
-### 21/24
-<figure markdown>
-![21/24 TCU Structure](img/PH2124annotated.png){ width="700" }
-  <figcaption>21/24 TCU Structure</figcaption>
-</figure>
+!!! example
+    **PHD**: "RXA2125, leave and re-enter controlled airspace on climb to F180, no reported IFR traffic"  
+    **RXA2125**: "Leave and re-enter controlled airspace on climb to F180, RXA2125"
 
 ## Coordination
 
 ### Enroute
 #### Departures
-Voiceless coordination is in place from PH TCU to PIY (and subsectors) for aircraft assigned the lower of `F180` or the `RFL`, and tracking via a Procedural SID terminus.
+Voiceless for all aircraft:
+ 
+- Tracking via a Procedural SID terminus; and  
+- Assigned the lower of `F180` or the `RFL`
 
-Any aircraft not meeting the above criteria must be prior coordinated to ENR.
+All other aircraft going to PIY CTA must be **Heads-up** Coordinated by PH TCU prior to the boundary.
 
 !!! example
     <span class="hotline">**PH TCU** -> **PIY**</span>: "PFY9916, with your concurrence, will be assigned F130, for my separation with JTE654"  
     <span class="hotline">**PIY** -> **PH TCU**</span>: "PFY9916, concur F130"  
 
 #### Arrivals
-The Standard assignable level from ENR to PH TCU is `A090`. All other levels must be prior coordinated.
+Voiceless for all aircraft:
+
+- With ADES **YPPH**; and  
+- Assigned a STAR; and  
+- Assigned `A090`
+
+All other aircraft coming from PIY CTA will be **Heads-up** Coordinated to PH TCU.
 
 ### PH ADC
 #### Auto Release
+'Next' coordination is **not** required for aircraft that are:   
+    a) Departing from a runway nominated on the ATIS; and  
+    b) Assigned the standard assignable level; and  
+    c) Assigned a **Procedural SID**
 
-"Next" Coordination is a procedure where the PH ADC controller gives a heads-up to the PH TCU controller about an impending departure. The PH TCU controller will respond by assigning a heading to the aircraft, for the PH ADC controller to pass on with their takeoff clearance.
+All other aircraft require a 'Next' call to PH TCU.
 
 !!! example
     <span class="hotline">**PH ADC** -> **PH TCU**</span>: "Next, ABC, runway 03"  
     <span class="hotline">**PH TCU** -> **PH ADC**</span>: "ABC, Heading 010, unrestricted"  
-    <span class="hotline">**PH ADC** -> **PH TCU**</span>: "Heading 010, unrestricted, ABC"
+    <span class="hotline">**PH ADC** -> **PH TCU**</span>: "Heading 010, ABC"  
 
-"Next" Coordination to PH TCU is not required for aircraft assigned a **Procedural SID** and the Standard Assignable Level.
-
-"Next" Coordination to PH TCU is additionally required for:   
-    a) Aircraft on a non-standard level.  
-    b) Aircraft departing from a runway not nominated in the ATIS.  
+    **PH ADC**: "ABC, Assigned heading left 010, Runway 03, Cleared for Takeoff"  
+    **ABC**: "Left heading 010, Runway 010, Cleared for Takeoff, ABC"
 
 The PH TCU controller can suspend/resume Auto Release at any time, with the concurrence of PH ADC.
 
@@ -164,8 +176,12 @@ All other aircraft transiting between internal PH TCU boundaries must be heads-u
     <span class="hotline">**PHD** -> **PHA**</span>: "FD123, A090"    
 
 ### JT ADC
+#### Airspace
+JT ADC is responsible for the Class D airspace in the JT CTR `SFC` to `A015`.
 
-### Next Call
+Refer to [Reclassifications](#jt-ctr) for operations when JT ADC is offline.
+
+#### Departures
 When the aircraft is ready for departure, JT ADC will coordinate with the relevant PH TCU controller above them for permission to release the aircraft into their CTA.
 
 !!! example
@@ -175,7 +191,7 @@ When the aircraft is ready for departure, JT ADC will coordinate with the releva
 
 The Standard Assignable level from JT ADC to PH TCU is the lower of `A030` or the `RFL`, any other level must be prior coordinated.
 
-### Arrivals/Overfliers
+#### Arrivals/Overfliers
 PH TCU will heads-up coordinate arrivals/overfliers from Class C to JT ADC prior to **5 mins** from the boundary.  
 IFR aircraft will be cleared for the coordinated approach (Instrument or Visual) prior to handoff to JT ADC, unless JT ADC nominates a restriction.  
 VFR aircraft require a level readback.

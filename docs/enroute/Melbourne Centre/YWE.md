@@ -14,7 +14,18 @@
 | Griffith† | Melbourne Centre | 122.750 | ML-GTH_CTR |
 | Katoomba† | Melbourne Centre | 133.500 | ML-KAT_CTR |
 
-† *Non-standard positions* may only be used in accordance with [VATPAC Ratings and Controller Positions Policy](https://vatpac.org/publications/policies)
+† *Non-standard positions* may only be used in accordance with [VATPAC Air Traffic Services Policy](https://vatpac.org/publications/policies)
+
+### CPDLC
+
+The Primary Communication Method for YWE is Voice.
+
+[CPDLC](../../controller-skills/cpdlc.md) may be used in lieu when applicable.
+
+The CPDLC Station Code is `YYWE`.
+
+!!! tip
+        Even though YWE's Primary Communication Method is Voice, CPDLC may be used for Overfliers.
 
 ## Airspace
 
@@ -37,7 +48,7 @@ MUN is responsible for issuing STAR Clearances for aircraft arriving at YMML. MU
 OXL is responsible for issuing STAR Clearances for aircraft arriving at YMML. OXL will also initiate sequencing as required for aircraft arriving at YMML.
 
 ### Griffith (GTH)
-Just keeping them separated!
+GTH is responsible for issuing STAR Clearances for YSSY.
 
 ### Katoomba (KAT)
 KAT is responsible for issuing STAR Clearances for YSCB and YSSY.
@@ -52,6 +63,7 @@ Aircraft being transferred to the following sectors shall be told to Expect STAR
 | GTH | OXL | YMML, YMAV | |
 | OXL | ELW(BLA) | YSCB | |
 | GTH | BIK(GUN) | YSSY | |
+| OXL | GTH | YSSY | |
 | WON | HUO | YMHB | |
 
 ### First Contact
@@ -61,20 +73,36 @@ Aircraft being transferred from the following sectors shall be given STAR Cleara
 | ---- | -------- | --------- | --------- |
 | TBD | MUN | YMML, YMAV | |
 | ASP(BKE), GTH | OXL | YMML, YMAV | |
-| HUO | WON | YMML | 
-| ASP(BKE) | KAT | YSSY | |
+| HUO, ELW(SNO) | WON | YMML | 
+| ASP(BKE) | GTH, KAT | YSSY | |
+| OXL | GTH | YSSY | |
 | ARL(MDE) | KAT | YSCB | |
 
 ## Coordination
 
 ### ML TCU
-The Standard assignable level from YWE and WON to ML TCU is `A090`, and assigned the ARBEY #, PORTS #, WAREN #, or WENDY # STAR.
-
-All other aircraft must be voice coordinated to ML TCU prior to **20nm** from the boundary.
-
-The Standard Assignable level from ML TCU to YWE/WON is `F240`, and tracking via CRENA, ESDIG, NEVIS, CORRS, KEPPA, or SUNTI.
+#### Airspace
+The Vertical limits of the ML TCU are `SFC` to `F245`.
 
 Refer to [Melbourne TCU Airspace Division](../../../terminal/melbourne/#airspace-division) for information on airspace divisions when **MDN** and/or **MDS** are online.
+
+#### Arrivals/Overfliers
+Voiceless for all aircraft:
+
+- With ADES **YMML**; and  
+- Assigned a STAR; and  
+- Assigned `A090`
+
+All other aircraft coming from YWE/WON CTA must be **Heads-up** Coordinated to ML TCU prior to **20nm** from the boundary.
+
+#### Departures
+Voiceless to all surrounding Enroute sectors for all aircraft:
+ 
+- Tracking via a Procedural SID terminus; and  
+- Assigned the lower of `F240` or the `RFL`
+
+All other aircraft going to YWE/WON CTA will be **Heads-up** Coordinated by ML TCU.
+
 ### Enroute
 As per [Standard coordination procedures](../../../controller-skills/coordination/#enr-enr), Voiceless, no changes to route or CFL within **50nm** to boundary.
 
@@ -97,26 +125,21 @@ That being said, it is *advised* that YWE(All) gives **Heads-up Coordination** p
 - YWE to WON for all aircraft  
 
 ### SY TCU
-As per [Standard coordination procedures](../../../controller-skills/coordination/#enr-tcu), all aircraft must be **Heads-up coordinated** prior to **20nm** from the boundary.  
-
-The Standard Assignable level from SY TCU to KAT is the lower of `F280` or the `RFL`, and tracking via KADOM.
+#### Airspace
+SY TCU is responsible for the airspace within a 45nm radius of TESAT, `SFC` to `F285`.
 
 Refer to [Sydney TCU Airspace Division](../../../terminal/sydney/#airspace-division) for information on airspace divisions when **SAS**, **SDN**, **SDS** and/or **SRI** are online.
 
-### ESL TCU
-#### Airspace
-By default, **ESL TCU** owns the airspace within 30nm ESL, `SFC` to `F200`, unless stated otherwise by ad-hoc release or NOTAM.
-#### Departures
-Departures from YMES in to WON Class C will be coordinated at taxi, and will be requesting a level.
-
-!!! example
-    <span class="coldline">**ESL TCU** -> **WON**</span>: "Taxi, ALDN16 for YFLI DCT, Requesting F230"  
-    <span class="coldline">**WON** -> **ESL TCU**</span>: "ALDN16, F230"  
-    <span class="coldline">**ESL TCU** -> **WON**</span>: "F230, ALDN16"  
-
 #### Arrivals/Overfliers
-All aircraft transiting from WON to **ESL TCU** must be heads-up coordinated prior to **20nm** from the boundary. Operations within **ESL TCU** are fairly ad-hoc, so there are no standard assignable levels, simply whatever the WON and **ESL TCU** controller agree on.
+As per [Standard coordination procedures](../../../controller-skills/coordination/#enr-tcu), all aircraft must be **Heads-up coordinated** prior to **20nm** from the boundary.  
 
-!!! example
-    <span class="hotline">**WON** -> **ESL TCU**</span>: "via ANTLA, BFRT23, will be assigned F220, I have no restrictions on descent"  
-    <span class="hotline">**ESL TCU** -> **WON**</span>: "BFRT23, F220"  
+#### Departures
+Voiceless for all aircraft:
+
+- Assigned the lower of `F280` or the `RFL`; and  
+- Tracking via **KADOM**
+
+All other aircraft going to KAT CTA will be **Heads-up** Coordinated.
+
+### ES TCU
+Reserved.

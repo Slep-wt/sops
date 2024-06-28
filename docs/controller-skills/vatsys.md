@@ -4,7 +4,15 @@ title: vatSys Setup
 
 --8<-- "includes/abbreviations.md"
 
-Although much of the detailed setup is up to personal preference, the following setttings are **strongly** recommended to help best execute the appropriate role.
+<details open markdown="1">
+<summary>Setup</summary>
+
+Although much of the detailed setup is up to personal preference, the following settings are **strongly** recommended to help best execute the appropriate role.
+
+</details>
+
+<details markdown="1">
+<summary>Enroute</summary>
 
 ## Enroute
 ### Display
@@ -31,13 +39,18 @@ Strips: **STATE**
 ### Tools
 Velocity Vector: **2 MINS**  
 Short Route Probe: **OFF** (Toggled on for non-identified tracks)  
-History Trails: **OFF**  
+History Trails: **9**  
 FPASD: **ON**  
 Extended Labels: **ON**  
 ### Info
 **AREA QNH**  
 **TFMS** (if airport is busy, eg during events)  
 **AIS DISPLAY** for major airports in your airspace
+
+</details>
+
+<details markdown="1">
+<summary>TCU</summary>
 
 ## TCU
 ### Display
@@ -48,7 +61,7 @@ Strips: **BEACON**
 ### Windows displayed
 **ADEP (Towered airports in airspace)**  
 **Other**  
-**ARRIVAL LIST** (if airport is busy, eg during events)  
+**ARRIVAL LIST**  
 **All ATISes** in your airspace  
 ### Maps
 **Dynamic Infill**  
@@ -59,18 +72,22 @@ Strips: **BEACON**
 #### Local
 **XX_COAST**  
 **XX_(RWY CONFIG)**  
-**XX_(RWY CONFIG)_NAMES**  
+**XX_RTCC**  
 **XX_TCU**  
 ### Tools
 Velocity Vector: **1 MIN**  
 Short Route Probe: **OFF**  
-History Trails: **OFF**  
+History Trails: **5**  
 FPASD: **ON**  
 Extended Labels: **OFF** (Toggled on for aircraft not arriving at main airport)  
 ### Info
-**AREA QNH**  
 **TFMS** (if airport is busy, eg during events)  
 **AIS DISPLAY** for major airports in your airspace
+
+</details>
+
+<details markdown="1">
+<summary>Tower</summary>
 
 ## Tower
 ### Display
@@ -97,8 +114,10 @@ Strips: **BEACON**
 ### Tools
 Velocity Vector: **1 MIN**  
 Short Route Probe: **OFF** (Toggled on for non-identified tracks)  
-History Trails: **OFF**  
+History Trails: **5**  
 FPASD: **ON**  
 Extended Labels: **OFF** (Toggled on for aircraft not arriving at main airport)  
 ### Info
 **AIS DISPLAY**
+
+</details>

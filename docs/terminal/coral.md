@@ -24,29 +24,49 @@ MKA may extend to RKA and vice versa, callsigns remain the same. See [Controller
     <figure markdown>
     ![Coral Combined Airspace](img/coraltcusetup.png){ width="1000" }
     </figure>
+
 ## Coordination
 
 ### Enroute
 #### Departures
-Voiceless coordination is in place from MKA/RKA to ENR for aircraft:  
+Voiceless for all aircraft:
 
-**Departing All Ports** - Assigned the lower of `F150` or `RFL`  
+- With ADEP **YBMK**  
+  - Tracking via **CLIFT** or **MUNAR**; and  
+  - Assigned the lower of `F150` or the `RFL`  
+- With ADEP **YBRK**  
+  - Tracking via **BUDGI** or **TARES**; and  
+  - Assigned the lower of `F150` or the `RFL`
 
-Any aircraft not meeting the above criteria must be prior coordinated to ENR.
+All other aircraft going to SWY/KPL CTA must be **Heads-up** Coordinated by MKA/RKA.
 
 !!! example
     <span class="hotline">**RKA** -> **KPL**</span>: "QFA114, with your concurrence, will be assigned F130, for my separation with ZYX"  
     <span class="hotline">**KPL** -> **RKA**</span>: "QFA114, concur F130"  
 
 #### Arrivals
-The Standard assignable level from INL(KPL) to RKA is `A070`, and assigned a STAR. All other aircraft must be prior coordinated.  
-The Standard assignable level from KEN(SWY) to MKA is `A070`, and assigned a STAR. All other aircraft must be prior coordinated
+Voiceless for all aircraft:
+
+- With ADES **YBMK**    
+  - Assigned the **DAGSI** or **WELKE** STAR; and  
+  - Assigned `A070`  
+- With ADES **YBRK**; and  
+  - Assigned the **ABVAS** or **DADBO** STAR; and  
+  - Assigned `A070`
+
+All other aircraft coming from SWY/KPL CTA will be **Heads-up** Coordinated to MKA/RKA.
 
 ### MK/RK ADC
-#### Auto Release
-"Next" Coordination to TCU is required for all departures not assigned a SID.
+#### Airspace
+MK ADC is responsible for the Class D airspace in the MK CTR `SFC` to `A010`.
 
-"Next" Coordination is a procedure where the **ADC** controller gives a heads-up to the TCU controller about an impending departure not on a SID. The TCU controller will respond by assigning a visual heading to the aircraft, for the **ADC** controller to pass on with their takeoff clearance.
+RK ADC is responsible for the Class D airspace in the RK CTR `SFC` to `A010`.
+
+#### Auto Release
+'Next' coordination is **not** required from MK/RK ADC for aircraft that are:   
+  a) Departing from a runway nominated on the ATIS; and  
+  b) Assigned the standard assignable level; and  
+  c) Assigned a **Procedural** SID
 
 !!! example
     <span class="hotline">**MK ADC** -> **MKA**</span>: "Next, ABC, runway 14"  
@@ -55,11 +75,9 @@ The Standard assignable level from KEN(SWY) to MKA is `A070`, and assigned a STA
 
 The TCU controller can suspend/resume Auto Release at any time, with the concurrence of **ADC**.
 
-!!! Note
-    "Next" Coordination to TCU is not required for aircraft assigned a **Procedural SID** and the Standard Assignable Level.
-
 The Standard Assignable level from MK/RK ADC to MKA/RKA is the lower of `A060` or the `RFL`.
 
+#### MK/RK SMC
 The controller assuming responsibility of **SMC** shall give heads-up coordination to TCU controller prior to the issue of the following clearances:  
 
 - VFR Departures  

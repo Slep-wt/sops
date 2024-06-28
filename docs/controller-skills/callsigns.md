@@ -23,7 +23,6 @@ This page lists some of the most commonly used callsigns in Australia.
 | BNZ | BONZA |
 | CFH  | CAREFLIGHT |
 | FD | FLYDOC |
-| HM | HEMS |
 | HND | HINTERLAND |
 | JTE  | JETEX |
 | JST | JETSTAR |
@@ -42,7 +41,7 @@ This page lists some of the most commonly used callsigns in Australia.
 | SND  | SNOWBIRD |
 | TGG | TIGGOZ |
 | TFR  | TOLL FREIGHT |
-| TFX  | TOLL EXPRESS |
+| TFX  | TEAM AIR |
 | UTY | UNITY |
 | VOZ  | VELOCITY |
 | WP  | WESTPAC |
@@ -64,6 +63,7 @@ This page lists some of the most commonly used callsigns in Australia.
 | AZG | SILK WEST | Azerbaijan |
 | BAV | BAMBOO | Vietnam |
 | BAW | SPEEDBIRD | United Kingdom |
+| BTK | BATIK | Indonesia |
 | CBJ | CAPITAL JET | China |
 | CCA | AIR CHINA | China |
 | CEB | CEBU | Philippines |
@@ -73,7 +73,7 @@ This page lists some of the most commonly used callsigns in Australia.
 | CSN | CHINA SOUTHERN | China |
 | CXA | XIAMEN AIR | China |
 | DAL | DELTA | United States |
-| DLH | Lufthansa | Germany |
+| DLH | LUFTHANSA | Germany |
 | ETD | ETIHAD | United Arab Emirates |
 | FJI | FIJI | Fiji |
 | GCR | BOHAI | China |

@@ -4,7 +4,17 @@ title: Procedural
 
 --8<-- "includes/abbreviations.md"
 
+<details markdown="1">
+<summary>Departures</summary>
+
 ## Departures
+### 2 min
+| Conditions | |
+| ------------- | ------------------ |
+| a) The aircraft are climbing to vertically separated levels;<br>b) Both aircraft report reaching the cruising level;<br>c) If the following aircraft is climbing to a lower level than the preceding aircraft, and reaches that level first, apply another form of separation immediately; and<br>d) climb and cruising IAS of the following aircraft is at least 10 kt slower and not more than 90% of the climb and cruising IAS or Mach number of the leading aircraft. | <figure markdown>
+![2 min Departure Standard Diagram](img/dep2min.png){ width="600" }
+</figure> |
+
 ### 5 min
 | Conditions | |
 | ------------- | ------------------ |
@@ -19,6 +29,11 @@ title: Procedural
 ![10 min Departure Standard Diagram](img/dep7a.png){ width="600" }
 </figure> |
 
+</details>
+
+<details markdown="1">
+<summary>Arrivals</summary>
+
 ## Arrivals
 ### 10nm
 | Conditions | |
@@ -26,6 +41,11 @@ title: Procedural
 | a) Both aircraft are inbound and the leading aircraft is within 20 NM of a controlled aerodrome with DME or a published waypoint; and<br>b) The aircraft are assigned vertically separated levels. | <figure markdown>
 ![10nm Arrival Standard Diagram](img/d5.png){ width="600" }
 </figure> |
+
+</details>
+
+<details markdown="1">
+<summary>Longitudinal</summary>
 
 ## Longitudinal
 
@@ -58,7 +78,7 @@ After the estimated time of passing, aircraft may not climb or descend through t
 
 ### Distance
 #### Distance Reports
-Distance standards cannot be applied using the Bearing-Range Line Tool, since the position displayed on the scope is just an estimation of where the aircraft is.  
+Distance standards **cannot** be applied using the Bearing-Range Line Tool, since the position displayed on the scope is just an estimation of where the aircraft is.  
 Instead, it must be done using actual reports from the aircraft.  
 
 The lead aircraft must be tracking directly to/from the aid. Always ask the lead aircraft for their distance report prior to the following aircraft.  
@@ -102,6 +122,11 @@ Distance checks must be conducted as per the following table:
 ![Opposite sides of visual fix Standard Diagram](img/t7b.png){ width="600" }
 </figure> |
 
+</details>
+
+<details markdown="1">
+<summary>Lateral</summary>
+
 ## Lateral
 
 ### Time-based crossing track
@@ -115,15 +140,17 @@ Where a difference 15 minutes does not exist at the crossing point, vertical sep
 ![Both](../oceanic/assets/Both.png)
 </figure>
 
-### Conflict Area
+<details markdown="1">
+<summary>Conflict Area</summary>
 
+### Conflict Area
 The Quickest and easiest way to assess lateral conflict scenarios is with the *Conflict Area tool*. Unfortunately, whilst its quick and easy to *use*, it's fairly complex and long to understand the rules and concepts.  
 The first thing to note, is that there are many different unusual remarks and equipment codes that pilots file on VATSIM, primarily because not everyone knows what they mean. A little bit of background knowledge is required to understand these concepts.
 
 #### NAVCAPs
 All aircraft have a NAVCAP, associated with a ***Circular Error of Position***. This determines which number to select when using the Conflict Area Tool:
 
-| NAVCAP Code | Meaning | Cicular Error of Position (CEP) |
+| NAVCAP Code | Meaning | Circular Error of Position (CEP) |
 | ---- | ----------- | -------- |
 | A | All | 7nm |
 | 2 | RNP2 | 7nm |
@@ -203,6 +230,11 @@ Use BRL to measure a distance to/from a waypoint that is outside of the conflict
     "Climb to reach (vertically separated level) by (GNSS distance outside entry of conflict area)"  
     "Report (GNSS distance outside exit of conflict area) for requested level"  
 
+</details>
+
+<details markdown="1">
+<summary>Lat Sep Table</summary>
+
 ### Lat Sep Table
 Lateral Separation works off the basis off establishing a *Lateral Separation Point* (Lat Sep point). That is, when given an angle that 2 tracks intersect at, a distance at which lateral separation is considered to exist procedurally. These figures are detailed in the table below:
 
@@ -222,6 +254,12 @@ In a more visual form, ABC can be considered to be laterally separated from airc
 
 This can be used to plan restrictions as required when surveillance coverage cannot be assured.
 
+</details>
+</details>
+
+<details markdown="1">
+<summary>Vertical</summary>
+
 ## Vertical
 
 ### 1000ft
@@ -237,3 +275,5 @@ This can be used to plan restrictions as required when surveillance coverage can
 
 ### 3000ft
 - When at least one aircraft is supersonic
+
+</details>

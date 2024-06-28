@@ -10,7 +10,18 @@
 | **Tailem Bend** | **Melbourne Centre** | **123.050** | **ML-TBD_CTR** |
 | Augusta† | Melbourne Centre | 127.050 | ML-AUG_CTR |
 
-† *Non-standard positions* may only be used in accordance with [VATPAC Ratings and Controller Positions Policy](https://vatpac.org/publications/policies)
+† *Non-standard positions* may only be used in accordance with [VATPAC Air Traffic Services Policy](https://vatpac.org/publications/policies)
+
+### CPDLC
+
+The Primary Communication Method for TBD is Voice.
+
+[CPDLC](../../controller-skills/cpdlc.md) may be used in lieu when applicable.
+
+The CPDLC Station Code is `YTBD`.
+
+!!! tip
+        Even though TBD's Primary Communication Method is Voice, CPDLC may be used for Overfliers.
 
 ## Airspace
 
@@ -49,11 +60,27 @@ Aircraft being transferred from the following sectors shall be given STAR Cleara
 ## Coordination
 
 ### AD TCU
-The Standard assignable level from TBD/AUG to AD TCU is `A090`, and assigned a STAR.
+#### Airspace
+The Vertical limits of the AD TCU are `SFC` to `F245`.
 
-All other aircraft must be voice coordinated to AD TCU prior to **20nm** from the boundary.
+Refer to [Adelaide TCU Airspace Division](../../../terminal/adelaide/#airspace-division) for information on airspace divisions when **AAW** is online.
 
-The Standard Assignable level from AD TCU to TBD/AUG is the lower of `F240` or the `RFL`, and tracking via a SID terminus.
+#### Arrivals/Overfliers
+Voiceless for all aircraft:
+
+- With ADES **YPAD**; and  
+- Assigned a STAR; and  
+- Assigned `A090`
+
+All other aircraft coming from TBD CTA must be **Heads-up** Coordinated to AD TCU prior to **20nm** from the boundary.
+
+#### Departures
+Voiceless for all aircraft:
+ 
+- Tracking via a Procedural SID terminus; and  
+- Assigned the lower of `F240` or the `RFL`
+
+All other aircraft going to TBD CTA will be **Heads-up** Coordinated by AD TCU.
 
 ### Enroute
 As per [Standard coordination procedures](../../../controller-skills/coordination/#enr-enr){target=new}, Voiceless, no changes to route or CFL within **50nm** to boundary.
