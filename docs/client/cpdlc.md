@@ -16,9 +16,9 @@ PDC's utilising vatACARS are initiated by the pilot, however, the standalone vat
 
 ## Setup
 
-The vatACARS client can be downloaded by clicking [here](https://vatacars.com/).  
+The vatACARS client can be downloaded by clicking [here](https://vatacars.com/){target=new}.  
 
-The vatACARS client requires controllers to have a [Hoppies ACARS](https://www.hoppie.nl/acars/system/register.html) account and logon code, plus a [vatACARS Token](https://vatacars.com/me).
+The vatACARS client requires controllers to have a [Hoppies ACARS](https://www.hoppie.nl/acars/system/register.html){target=new} account and logon code, plus a [vatACARS Token](https://vatacars.com/me){target=new}.
 
 If the client is installed correctly, there will be an *ACARS* drop-down box available.
 
@@ -30,15 +30,18 @@ If the client is installed correctly, there will be an *ACARS* drop-down box ava
 
 To utilise vatACARS for issuing PDC's, the controller must be logged into a VATPAC TCU, ADC, SMC or ACD position.
 
-After logging onto the network, the controller should open the *Setup* window, fill in the relevent details, and click *Save & Connect*
+!!! Note
+    If multiple controllers are present at one airport, the controller responsible for the ACD position will manage PDCs through vatACARS.
+
+After logging onto the VATSIM network, the controller should open the *Setup* window, fill in the relevent details, and click *Connect*
 
 <figure markdown>
 ![vatACARS Setup](../controller-skills/img/vatacarslogon.png){ width="700" }
 </figure>
 
 **Station Code:** Must be the identifier of the position which is being controlled.          
-**vatACARS Token:** Must be your unique vatACARS Token, found [Here](https://vatacars.com/me).          
-**Logon Code:** Must be your [Hoppies ACARS](https://www.hoppie.nl/acars/system/register.html) Code.            
+**vatACARS Token:** Must be your unique vatACARS Token, found [here](https://vatacars.com/me){target=new}.          
+**Logon Code:** Must be your [Hoppies ACARS](https://www.hoppie.nl/acars/system/register.html){target=new} Code.            
 
 Controllers **MUST** note in their controller remarks section that PDC's are available in the format below.
 
@@ -46,9 +49,8 @@ Controllers **MUST** note in their controller remarks section that PDC's are ava
 ![vatACARS Continfo](../controller-skills/img/vatacarscontinfo2.png){ width="700" }
 </figure>
 
-Once connected and with CPDLC enabled, pilots will connect to the vatACARS plugin via their aircraft's CPDLC system. The controller will normally recieve a *'Request PDC'* message through vatACARS.         
-The controller should left click their callsign to issue the PDC. A self explanitory window will appear, fill in the relevent data and send this back to the aicraft.       
-Once the aircraft has recieved their PDC, the pilot will usually respond with *'Roger'* or similar to show they have recieved the clearance. 
+Once connected and with CPDLC enabled, pilots will connect to the vatACARS plugin via their aircraft's CPDLC system. The controller will normally receive a *'Request PDC'* message through vatACARS. The controller should left-click the received message to issue the PDC. A self-explanatory window will appear, fill in the *DEP FREQ* and, if required, *FREE TEXT* field and send this back to the aircraft. Note that the pilot's strip **MUST** be filled out in order to issue a PDC through vatACARS. Once the aircraft has received their PDC, the pilot will usually respond with *'Roger'* or similar to show they have received the clearance.
+
 
 <figure markdown>
 ![vatACARS Setup](../controller-skills/img/vatacarspdc.png){ width="700" }
@@ -63,15 +65,15 @@ To utilise CPDLC, the controller must be logged into a VATPAC Enroute or Oceanic
 
 **CPDLC (Except for PDC's) must not be used below `F245`.**
 
-After logging onto the network, the controller should open the *Setup* window, fill in the relevent details and click *Save & Connect*
+After logging onto the VATSIM network, the controller should open the *Setup* window, fill in the relevent details and click *Connect*
 
 <figure markdown>
 ![vatACARS Setup](../controller-skills/img/vatacarslogon.png){ width="700" }
 </figure>
 
 **Station Code:** Must be the identifier of the position which is being controlled.          
-**vatACARS Token:** Must be your unique vatACARS Token, found [Here](https://vatacars.com/me).          
-**Logon Code:** Must be your [Hoppies ACARS](https://www.hoppie.nl/acars/system/register.html) Code.            
+**vatACARS Token:** Must be your unique vatACARS Token, found [here](https://vatacars.com/me){target=new}.          
+**Logon Code:** Must be your [Hoppies ACARS](https://www.hoppie.nl/acars/system/register.html){target=new} Code.            
 
 Controllers **MUST** note in their controller remarks section that CPDLC is available in the format below.
 
@@ -123,7 +125,7 @@ This aircraft will now be automatically added to your Dispatch window to allow a
 ### Message Editor
 
 When either a pilot sends a request or ATC requires to send a message to the pilot, left clicking the callsign in the dispatch window will open the message editor.         
-This is used to select from a group of pre-coded messages to send back to the pilot.        
+This is used to select from a group of relevant messages to send back to the pilot.   
 
 <figure markdown>
 ![vatACARS Setup](../controller-skills/img/vatacarseditor2.png){ width="700" }
@@ -153,7 +155,7 @@ Standard Voice frequency transfers must be used for aircraft below `F245` and be
 
 ### Terminating CPDLC
 
-If CPDLC is no longer available or required, ATC will right click on the aircraft which will bring up a logoff window. By clicking *'LOGOFF'* the aircraft will be sent a Logoff message.
+If CPDLC is no longer available or required, ATC will right-click on the aircraft, which will bring up the option to log the aircraft off. By clicking *'LOGOFF'*, the aircraft will be sent a Logoff message.
 
 <figure markdown>
 ![vatACARS Setup](../controller-skills/img/vatacarshandoff.png){ width="700" }
